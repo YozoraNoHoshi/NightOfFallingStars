@@ -22,6 +22,29 @@
   color: #61dafb;
 }
 
+.row-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.border-text {
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.link-text {
+  transition: color 0.25s linear;
+  margin: 2px;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

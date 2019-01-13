@@ -1,0 +1,45 @@
+#navbar {
+  background: rgb(22, 62, 109);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#img-banner {
+  background-image: url('https://i.imgur.com/UNH6rDY.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 25vh;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.25em;
+}
+
+.menu {
+  box-sizing: border-box;
+  padding: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: color 0.25s linear;
+}
+
+.menu:hover {
+  background-color: rgb(71, 104, 196);
+}
+
+.border-text {
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.link-text {
+  transition: color 0.25s linear;
+  margin: 2px;
+}
+
+.no-underline {
+  text-decoration: none;
+}
