@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LinkBox from './LinkBox/LinkBox';
 
 class LeftSidebar extends Component {
   constructor(props) {
@@ -17,7 +18,11 @@ class LeftSidebar extends Component {
   };
 
   render() {
-    return <div className="LeftSidebar" />;
+    return (
+      <div className="LeftSidebar">
+        <LinkBox />
+      </div>
+    );
   }
 }
 
