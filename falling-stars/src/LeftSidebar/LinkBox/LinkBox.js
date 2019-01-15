@@ -1,24 +1,9 @@
 import React, { Component } from 'react';
 
 class LinkBox extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  handleChange = evt => {
-    this.setState({
-      [evt.target.name]: evt.target.value
-    });
-  };
-
-  handleSubmit = evt => {
-    evt.preventDefault();
-  };
-
   render() {
     return (
-      <div className="LinkBox link-container column-container right-margin">
+      <div className="LinkBox">
         <a href={this.props.link}>
           <img
             src={this.props.logo.image}
@@ -27,7 +12,7 @@ class LinkBox extends Component {
             width={this.props.logo.width}
           />
         </a>
-        <a href={this.props.link} class="border-text link-text">
+        <a href={this.props.link} class="link-text">
           {this.props.name}
         </a>
       </div>
@@ -35,7 +20,10 @@ class LinkBox extends Component {
   }
 }
 
-LinkBox.defaultProps = {};
+LinkBox.defaultProps = {
+  logo: { image: '', name: '', height: '', width: '' },
+  name: ''
+};
 
 LinkBox.propTypes = {};
 

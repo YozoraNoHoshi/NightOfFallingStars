@@ -1,0 +1,47 @@
+.title-box {
+  background-color: rgb(47, 73, 145);
+  width: 100%;
+  margin-top: 20px;
+}
+
+.title-text {
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  margin: 5px;
+}
+
+.siderow-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.title-box.container,
+.LeftSidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.LinkBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  margin-top: 5px;
+  padding-top: 5px;
+  width: 50%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.link-text {
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  transition: color 0.25s linear;
+  margin: 2px;
+}
+
+.LinkBox:hover {
+  background-color: rgb(25, 54, 97);
+}

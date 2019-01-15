@@ -3,30 +3,15 @@ import Navbar from './Navbar/Navbar';
 import './Header.css';
 
 class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  handleChange = evt => {
-    this.setState({
-      [evt.target.name]: evt.target.value
-    });
-  };
-
-  handleSubmit = evt => {
-    evt.preventDefault();
-  };
-
   render() {
     return (
       <header>
         <aside>
-          <Navbar />
+          <Navbar navItems={this.props.navItems} />
         </aside>
-        <div id="img-banner" className="row-container justify-around">
+        <div id="img-banner">
           <h1 id="title-banner">
-            <a href="index.html" className="border-text no-underline">
+            <a href="index.html" className="site-title">
               A Night Sky Full of Stars
             </a>
           </h1>
@@ -35,5 +20,8 @@ class Header extends Component {
     );
   }
 }
+Header.defaultProps = {
+  navItems: [{ name: '', link: '' }]
+};
 
 export default Header;

@@ -6,6 +6,9 @@
 }
 
 #img-banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   background-image: url('https://i.imgur.com/UNH6rDY.jpg');
   background-size: cover;
   width: 100%;
@@ -30,16 +33,13 @@
   background-color: rgb(71, 104, 196);
 }
 
-.border-text {
+.site-title {
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-decoration: none;
 }
 
 .link-text {
   transition: color 0.25s linear;
   margin: 2px;
-}
-
-.no-underline {
-  text-decoration: none;
 }

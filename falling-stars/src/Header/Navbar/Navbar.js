@@ -17,21 +17,20 @@ class Navbar extends Component {
     evt.preventDefault();
   };
 
-  // Navitem takes props name and url
+  renderNavItem = navItems => {
+    return navItems.map(n => {
+      return <NavItem name={n.name} link={n.link} />;
+    });
+  };
 
   render() {
     // URLs will need to be updated
-    return (
-      <nav id="navbar">
-        <NavItem name="home" url="/index.html" />
-        <NavItem name="meme-generator" url="/index.html" />
-        <NavItem name="matching-game" url="/index.html" />
-        <NavItem name="blackjack" url="/index.html" />
-        <NavItem name="stam-calc" url="/index.html" />
-        <NavItem name="github" url="/index.html" />
-      </nav>
-    );
+    return <nav id="navbar">{this.renderNavItem(this.props.navItems)}</nav>;
   }
 }
+
+Navbar.defaultProps = {
+  navitems: [{}, {}]
+};
 
 export default Navbar;

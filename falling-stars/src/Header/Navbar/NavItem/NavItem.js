@@ -30,10 +30,7 @@ class NavItem extends Component {
   render() {
     return (
       <div id={`menu-${this.props.name}`} className="menu">
-        <a
-          href={this.props.link}
-          className="border-text link-text no-underline"
-        >
+        <a href={this.props.link} className="link-text site-title">
           {this.convertToText(this.props.name)}
         </a>
       </div>
