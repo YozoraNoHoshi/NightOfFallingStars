@@ -2,10 +2,25 @@
   background: url('./static/background.png') no-repeat center center fixed;
   width: 100%;
   height: 100vh;
+  position: relative;
 }
+
 body {
   background: black;
   margin: 0px;
+}
+
+#main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+}
+
+.center-star {
+  margin-bottom: 100px;
 }
 
 .row-container {

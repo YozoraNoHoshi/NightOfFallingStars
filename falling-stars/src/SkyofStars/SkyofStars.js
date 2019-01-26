@@ -12,7 +12,9 @@ class SkyOfStars extends PureComponent {
       <div className="SkyOfStars">
         <Navbar navItems={navItems} siteHead={siteHead} />
         {/* <LeftSidebar sidebarLinks={this.props.sidebarLinks} /> */}
-        <Routes />
+        <div id="main">
+          <Routes />
+        </div>
       </div>
     );
   }

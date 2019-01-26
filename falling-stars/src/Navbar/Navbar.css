@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 10vh;
 }
 
 .nav-link {
@@ -29,6 +30,8 @@
   animation-iteration-count: 1;
 }
 .nav-item {
+  /* Causes animation to keep the final state */
+  /* animation-fill-mode: forwards; */
   animation: starfall 3s ease-in;
   animation-iteration-count: 1;
 }

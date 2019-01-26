@@ -5,19 +5,21 @@ import HomeSideBar from './HomeSideBar/HomeSideBar';
 class Routes extends PureComponent {
   render() {
     return (
-      <Switch>
-        <Route
-          exact
-          path="/"
-          render={props => (
-            <>
-              {/* <Home {...props} />
+      <div className="center-star">
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={props => (
+              <>
+                {/* <Home {...props} />
               <HomeSideBar {...props} /> */}
-            </>
-          )}
-        />
-        <Redirect to="/" />
-      </Switch>
+              </>
+            )}
+          />
+          <Redirect to="/" />
+        </Switch>
+      </div>
     );
   }
 }
