@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, { PureComponent } from 'react';
 import './App.css';
 import SkyOfStars from './SkyofStars/SkyofStars';
 
-class App extends Component {
+class App extends PureComponent {
   render() {
     return (
-      <div className="App">
+      <div className="Sky-Of-Stars">
         <SkyOfStars />
       </div>
     );

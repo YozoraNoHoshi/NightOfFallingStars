@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class LinkBox extends Component {
+class LinkBox extends PureComponent {
   render() {
     return (
       <div className="LinkBox">

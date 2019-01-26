@@ -1,32 +1,18 @@
-import React, { Component } from 'react';
-import Header from '../Header/Header';
+import React, { PureComponent } from 'react';
 import LeftSidebar from '../LeftSidebar/LeftSidebar';
-import MainContainer from '../MainContainer/MainContainer';
-import RightSidebar from '../RightSidebar/RightSidebar';
+import Routes from '../Routes';
+import { navItems, siteHead } from '../data/nav.json';
+import Navbar from '../Navbar/Navbar';
 
-class SkyOfStars extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+// The main container
 
-  handleChange = evt => {
-    this.setState({
-      [evt.target.name]: evt.target.value
-    });
-  };
-
-  handleSubmit = evt => {
-    evt.preventDefault();
-  };
-
+class SkyOfStars extends PureComponent {
   render() {
     return (
       <div className="SkyOfStars">
-        <Header navItems={this.props.navItems} />
-        <LeftSidebar sidebarLinks={this.props.sidebarLinks} />
-        <MainContainer />
-        <RightSidebar />
+        <Navbar navItems={navItems} siteHead={siteHead} />
+        {/* <LeftSidebar sidebarLinks={this.props.sidebarLinks} /> */}
+        <Routes />
       </div>
     );
   }

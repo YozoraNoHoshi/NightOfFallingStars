@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import LinkBox from './LinkBox/LinkBox';
 import './LeftSidebar.css';
 
-class LeftSidebar extends Component {
+class LeftSidebar extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {};

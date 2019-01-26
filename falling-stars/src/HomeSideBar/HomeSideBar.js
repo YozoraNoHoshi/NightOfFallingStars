@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class MainContainer extends Component {
+class RightSidebar extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {};
@@ -17,8 +17,8 @@ class MainContainer extends Component {
   };
 
   render() {
-    return <div className="MainContainer" />;
+    return <div className="RightSidebar" />;
   }
 }
 
-export default MainContainer;
+export default RightSidebar;
