@@ -45,7 +45,7 @@
 }
 
 .link-image {
-  filter: blur(3.5px);
+  filter: blur(3px);
   transition: filter 0.5s linear;
 }
 .ContactLink:hover > .link-image {
@@ -55,11 +55,12 @@
 .contact-text {
   text-decoration: none;
   color: transparent;
-  text-shadow: 0 0 3.5px white;
+  text-shadow: 0 0 3px white;
   transition: text-shadow 0.5s linear;
   margin: 2px;
   visibility: hidden;
 }
+
 .ContactLink:hover > .contact-text {
   text-shadow: 0 0 0.5px lightskyblue;
   visibility: visible;
@@ -77,15 +78,15 @@
 
 .contact-header,
 .contact-email {
-  animation-delay: 1s;
+  animation-delay: 0.75s;
 }
 
 .link-image,
 .contact-text {
-  animation-delay: 1.25s;
+  animation-delay: 1s;
 }
 .resume {
-  animation-delay: 1.75s;
+  animation-delay: 1.25s;
   text-shadow: 0 0 3.5px white;
 }
 

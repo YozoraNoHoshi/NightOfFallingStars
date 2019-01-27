@@ -19,10 +19,6 @@ body {
   height: 90vh;
 }
 
-.center-star {
-  margin-bottom: 100px;
-}
-
 .row-container {
   display: flex;
   flex-direction: row;

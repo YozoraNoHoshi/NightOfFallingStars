@@ -1,8 +1,8 @@
-.About {
+.quote,
+.profile {
   animation: starfall 1s linear;
   animation-fill-mode: both;
   animation-iteration-count: 1;
-  animation-delay: 0.75s;
 }
 
 .blurred-text {
@@ -11,8 +11,24 @@
   text-shadow: 0 0 2px white;
   transition: text-shadow 0.5s linear;
 }
-.About:hover > .blurred-text,
-.About:hover > .row-container > .blurred-text {
+.profile:hover > .blurred-text,
+.quote:hover > .quote-text {
   cursor: default;
   text-shadow: 0 0 0.5px lightskyblue;
+}
+
+.quote {
+  animation-delay: 0.5s;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 2px rgba(168, 212, 226, 0.3);
+}
+.profile {
+  animation-delay: 0.75s;
+}
+
+.quote > .blurred-text {
+  width: 35ch;
+  font-size: 1.25em;
+  text-align: center;
 }
