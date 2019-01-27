@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import NavItem from './NavItem/NavItem';
+import NavItem from './NavItem';
 import './Navbar.css';
 
 class Navbar extends PureComponent {

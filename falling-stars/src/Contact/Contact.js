@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import ContactLink from './ContactLink/ContactLink';
+import ContactLink from './ContactLink';
 import './Contact.css';
 import links from '../data/contact.json';
 import github from '../static/GitHubLogo.png';
 import linkedIn from '../static/LinkedInLogo.png';
+import angelList from '../static/AngelListLogo.png';
 
 class Contact extends Component {
   renderLinks = links => {
@@ -29,8 +30,24 @@ class Contact extends Component {
   render() {
     return (
       <div className="Contact">
-        <div className="row-container ">EMAIL</div>
-        <div className="row-container">{this.renderLinks(links)}</div>
+        <div className="column-container justify-around">
+          <div className="row-container border-text contact-header">
+            CONTACT ME
+          </div>
+          <div className="row-container border-text contact-email">
+            NCHOSHIZORA@GMAIL.COM
+          </div>
+        </div>
+        <div className="contact-links">{this.renderLinks(links)}</div>
+        <div className="row-container justify-around resume-box">
+          <a
+            href="../static/resume.pdf"
+            className="border-text no-underline resume"
+            download
+          >
+            Resume
+          </a>
+        </div>
       </div>
     );
   }
@@ -38,7 +55,8 @@ class Contact extends Component {
 
 Contact.defaultProps = {
   github,
-  linkedIn
+  linkedIn,
+  angelList
 };
 
 export default Contact;

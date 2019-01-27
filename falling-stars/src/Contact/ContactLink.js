@@ -4,7 +4,7 @@ class ContactLink extends PureComponent {
   render() {
     return (
       <div className="ContactLink">
-        <a href={this.props.link} className="link-image">
+        <a href={this.props.link} className="starfall link-image">
           <img
             src={this.props.logo.image}
             alt={this.props.logo.name}
@@ -12,7 +12,7 @@ class ContactLink extends PureComponent {
             width={this.props.logo.width}
           />
         </a>
-        <a href={this.props.link} className="contact-text">
+        <a href={this.props.link} className="starfall contact-text">
           {this.props.text}
         </a>
       </div>

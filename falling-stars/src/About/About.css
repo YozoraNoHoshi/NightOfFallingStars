@@ -1,0 +1,18 @@
+.About {
+  animation: starfall 1s linear;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  animation-delay: 0.75s;
+}
+
+.blurred-text {
+  text-decoration: none;
+  color: transparent;
+  text-shadow: 0 0 2px white;
+  transition: text-shadow 0.5s linear;
+}
+.About:hover > .blurred-text,
+.About:hover > .row-container > .blurred-text {
+  cursor: default;
+  text-shadow: 0 0 0.5px lightskyblue;
+}

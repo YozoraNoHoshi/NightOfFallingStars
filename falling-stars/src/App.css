@@ -33,7 +33,12 @@ body {
 }
 
 .justify-around {
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-text {
+  text-align: center;
 }
 
 .border-text {
@@ -58,21 +63,17 @@ body {
   margin-right: 5px;
 }
 
-/* .m-r-l {
-  margin-right: 100px;
-} */
-
 .no-padding {
   margin: 0px;
   padding: 0px;
   border: 0px;
 }
 
-@keyframes App-logo-spin {
+@keyframes starfall {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
 }

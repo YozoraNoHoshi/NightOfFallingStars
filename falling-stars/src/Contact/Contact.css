@@ -4,6 +4,12 @@
   justify-content: space-between;
 }
 
+.contact-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .ContactLink {
   display: flex;
   flex-direction: column;
@@ -16,12 +22,26 @@
   margin-right: 10px;
 }
 
-.link-image,
-.contact-text {
-  animation: starfall 2s linear;
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
-  animation-delay: 2s;
+.contact-header,
+.contact-email,
+.resume {
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bold;
+  text-decoration: none;
+  color: transparent;
+  transition: text-shadow 0.5s linear;
+}
+
+.contact-header,
+.contact-email {
+  cursor: default;
+  text-shadow: 0 0 2.5px white;
+}
+
+.resume:hover,
+.contact-header:hover,
+.contact-email:hover {
+  text-shadow: 0 0 0.5px lightskyblue;
 }
 
 .link-image {
@@ -32,7 +52,6 @@
   filter: blur(0.5px);
 }
 
-/* Make text really blurry and faded */
 .contact-text {
   text-decoration: none;
   color: transparent;
@@ -41,10 +60,41 @@
   margin: 2px;
   visibility: hidden;
 }
-/* Make text go normal again */
 .ContactLink:hover > .contact-text {
   text-shadow: 0 0 0.5px lightskyblue;
   visibility: visible;
+}
+
+.link-image,
+.contact-text,
+.contact-header,
+.contact-email,
+.resume {
+  animation: starfall 2s linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+.contact-header,
+.contact-email {
+  animation-delay: 1s;
+}
+
+.link-image,
+.contact-text {
+  animation-delay: 1.25s;
+}
+.resume {
+  animation-delay: 1.75s;
+  text-shadow: 0 0 3.5px white;
+}
+
+.contact-header {
+  font-size: 2em;
+}
+.contact-email,
+.resume {
+  font-size: 1.25em;
 }
 
 @keyframes starfall {
