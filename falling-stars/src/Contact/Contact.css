@@ -1,0 +1,57 @@
+.Contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ContactLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  margin-top: 10px;
+  padding-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.link-image,
+.contact-text {
+  animation: starfall 2s linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+}
+
+.link-image {
+  filter: blur(3.5px);
+  transition: filter 0.5s linear;
+}
+.ContactLink:hover > .link-image {
+  filter: blur(0.5px);
+}
+
+/* Make text really blurry and faded */
+.contact-text {
+  text-decoration: none;
+  color: transparent;
+  text-shadow: 0 0 3.5px white;
+  transition: text-shadow 0.5s linear;
+  margin: 2px;
+  visibility: hidden;
+}
+/* Make text go normal again */
+.ContactLink:hover > .contact-text {
+  text-shadow: 0 0 0.5px lightskyblue;
+  visibility: visible;
+}
+
+@keyframes starfall {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

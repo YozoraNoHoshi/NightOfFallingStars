@@ -1,19 +1,19 @@
-import React, { PureComponent } from 'react';
-import LeftSidebar from '../LeftSidebar/LeftSidebar';
+import React, { Component } from 'react';
 import Routes from '../Routes';
 import { navItems, siteHead } from '../data/nav.json';
 import Navbar from '../Navbar/Navbar';
 
 // The main container
 
-class SkyOfStars extends PureComponent {
+class SkyOfStars extends Component {
   render() {
     return (
       <div className="SkyOfStars">
         <Navbar navItems={navItems} siteHead={siteHead} />
-        {/* <LeftSidebar sidebarLinks={this.props.sidebarLinks} /> */}
-        <div id="main">
-          <Routes />
+        <div className="center-star">
+          <div id="main">
+            <Routes />
+          </div>
         </div>
       </div>
     );

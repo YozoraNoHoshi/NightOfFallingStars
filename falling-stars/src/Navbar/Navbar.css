@@ -9,13 +9,11 @@
   font-size: 2em;
   color: transparent;
   text-shadow: 0 0 5px white;
-  transition: text-shadow 0.5s linear;
+  transition: text-shadow 0.65s linear;
 }
 
 .nav-link:hover {
-  opacity: 1;
-  font-size: 2em;
-  text-shadow: 0px 0px 0.5px white;
+  text-shadow: 0px 0px 0.5px lightskyblue;
 }
 
 .menu {
@@ -30,10 +28,10 @@
   animation-iteration-count: 1;
 }
 .nav-item {
-  /* Causes animation to keep the final state */
-  /* animation-fill-mode: forwards; */
-  animation: starfall 3s ease-in;
+  animation: starfall 1.5s linear;
   animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-delay: 1s;
 }
 
 @keyframes starfall {
