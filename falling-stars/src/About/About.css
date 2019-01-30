@@ -1,34 +1,61 @@
+.About > .row-container {
+  justify-content: center;
+}
+
+.quoted-for-truth {
+  width: 50%;
+  flex-wrap: wrap;
+}
+
+.about-me {
+  width: 25%;
+  flex-wrap: wrap;
+}
+
 .quote,
 .profile {
   animation: starfall 1s linear;
   animation-fill-mode: both;
   animation-iteration-count: 1;
+  width: 50ch;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 2px rgba(168, 212, 226, 0.3);
 }
 
 .blurred-text {
   text-decoration: none;
   color: transparent;
-  text-shadow: 0 0 2px white;
+  text-shadow: 0 0 1px white;
   transition: text-shadow 0.5s linear;
+  cursor: default;
 }
+
+.column-container:hover > .blurred-text,
 .profile:hover > .blurred-text,
 .quote:hover > .quote-text {
   cursor: default;
   text-shadow: 0 0 0.5px lightskyblue;
 }
 
-.quote {
-  animation-delay: 0.5s;
-  margin: 10px;
-  padding: 10px;
-  box-shadow: 0px 0px 2px rgba(168, 212, 226, 0.3);
-}
-.profile {
-  animation-delay: 0.75s;
-}
-
 .quote > .blurred-text {
   width: 35ch;
   font-size: 1.25em;
   text-align: center;
+}
+
+.about-image {
+  filter: blur(2px);
+  transition: filter 0.5s linear;
+}
+.column-container:hover > .about-image {
+  filter: blur(0.5px);
+}
+
+.quote {
+  animation-delay: 0.75s;
+}
+.profile {
+  animation-delay: 0.5s;
 }

@@ -35,7 +35,7 @@
 .contact-header,
 .contact-email {
   cursor: default;
-  text-shadow: 0 0 2.5px white;
+  text-shadow: 0 0 1.5px white;
 }
 
 .resume:hover,
@@ -45,7 +45,7 @@
 }
 
 .link-image {
-  filter: blur(3px);
+  filter: blur(1.5px);
   transition: filter 0.5s linear;
 }
 .ContactLink:hover > .link-image {
@@ -55,7 +55,7 @@
 .contact-text {
   text-decoration: none;
   color: transparent;
-  text-shadow: 0 0 3px white;
+  text-shadow: 0 0 1.5px white;
   transition: text-shadow 0.5s linear;
   margin: 2px;
   visibility: hidden;
@@ -87,7 +87,7 @@
 }
 .resume {
   animation-delay: 1.25s;
-  text-shadow: 0 0 3.5px white;
+  text-shadow: 0 0 2px white;
 }
 
 .contact-header {

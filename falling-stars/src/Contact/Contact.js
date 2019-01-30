@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import ContactLink from './ContactLink';
 import './Contact.css';
 import links from '../data/contact.json';
@@ -6,7 +6,7 @@ import github from '../static/GitHubLogo.png';
 import linkedIn from '../static/LinkedInLogo.png';
 import angelList from '../static/AngelListLogo.png';
 
-class Contact extends Component {
+class Contact extends PureComponent {
   renderLinks = links => {
     return links.map(l => {
       let logo = {

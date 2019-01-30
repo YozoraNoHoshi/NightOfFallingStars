@@ -1,3 +1,7 @@
+:root {
+  --starfall-duration: 1.5s;
+}
+
 #navbar {
   display: flex;
   flex-direction: row;
@@ -8,7 +12,7 @@
 .nav-link {
   font-size: 2em;
   color: transparent;
-  text-shadow: 0 0 5px white;
+  text-shadow: 0 0 2px white;
   transition: text-shadow 0.65s linear;
 }
 
@@ -24,11 +28,11 @@
   text-decoration: none;
 }
 .nav-header {
-  animation: starfall 1.5s linear;
+  animation: starfall var(--starfall-duration) linear;
   animation-iteration-count: 1;
 }
 .nav-item {
-  animation: starfall 1.5s linear;
+  animation: starfall var(--starfall-duration) linear;
   animation-iteration-count: 1;
   animation-fill-mode: both;
   animation-delay: 0.5s;

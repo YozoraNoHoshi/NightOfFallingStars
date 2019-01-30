@@ -6,7 +6,7 @@ class PortfolioCard extends PureComponent {
     return (
       <div className="PortfolioCard">
         <Link to={this.props.link}>
-          <img src={this.props.image} alt="" />
+          <img className="portfolio-bg" src={this.props.image} alt="" />
           <div>{this.props.title}</div>
         </Link>
       </div>

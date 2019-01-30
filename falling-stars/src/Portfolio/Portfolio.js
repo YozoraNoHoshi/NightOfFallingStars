@@ -1,11 +1,17 @@
 import React, { PureComponent } from 'react';
 import PortfolioCard from './PortfolioCard';
+import './Portfolio.css';
 
 class Portfolio extends PureComponent {
   renderPortfolioCards = portfolio => {
     return portfolio.map(p => {
       return (
-        <PortfolioCard title={p.title} link={p.link} image={p.cardImage} />
+        <PortfolioCard
+          title={p.title}
+          key={p.title}
+          link={p.link}
+          image={p.cardImage}
+        />
       );
     });
   };

@@ -6,7 +6,11 @@ class About extends PureComponent {
     return (
       <div className="About column-container">
         <div className="row-container">
-          <div className="column-container">
+          <div className="column-container quoted-for-truth">
+            <div className="column-container profile">
+              <div className="blurred-text row-container">Nathan Chin</div>
+              <p className="blurred-text row-container">About blurb</p>
+            </div>
             <div className="quote column-container">
               <div className="quote-text blurred-text">
                 "For my part I know nothing with any certainty, but the sight of
@@ -19,24 +23,26 @@ class About extends PureComponent {
                 - Vincent Van Gogh
               </div>
             </div>
-            <div className="column-container profile">
-              <div className="blurred-text row-container">Nathan Chin</div>
-              <p className="blurred-text row-container">About blurb</p>
-            </div>
           </div>
-          <div className="column-container">
+          <div className="column-container about-me">
             <img
               src="../static/profilePic.jpg"
               alt="profile goes here"
               className="about-image"
             />
-            <div>Age</div>
-            <div>Hobbies</div>
+            <div className="blurred-text">Age: 24</div>
+            <div className="blurred-text">
+              Hobbies: Reading novels, making snippets and random minigames in
+              Python/JavaScript, playing games on the hardest difficulty,
+              playing games in general, memes, staring at the sky for literally
+              no reason.
+            </div>
           </div>
         </div>
       </div>
     );
   }
 }
+// Scribd
 
 export default About;
