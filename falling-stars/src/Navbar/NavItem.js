@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from '@reach/router';
 
 class NavItem extends PureComponent {
   render() {
@@ -9,13 +9,13 @@ class NavItem extends PureComponent {
       <header>
         <aside>
           <li id={`nav-${this.props.name}`} className={classes}>
-            <NavLink
+            <Link
               className="no-underline nav-link"
               to={this.props.link}
               style={{ opacity: 1.0 }}
             >
               {this.props.text}
-            </NavLink>
+            </Link>
           </li>
         </aside>
       </header>
