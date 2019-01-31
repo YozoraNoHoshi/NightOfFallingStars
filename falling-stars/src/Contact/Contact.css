@@ -1,3 +1,10 @@
+:root {
+  --text-transition: 0.5s;
+  --blur: 1.5px;
+  --blur-off: 0.5px;
+  --base-animation-delay: 1s;
+}
+
 .Contact {
   display: flex;
   flex-direction: column;
@@ -29,40 +36,40 @@
   font-weight: bold;
   text-decoration: none;
   color: transparent;
-  transition: text-shadow 0.5s linear;
+  transition: text-shadow var(--text-transition) linear;
 }
 
 .contact-header,
 .contact-email {
   cursor: default;
-  text-shadow: 0 0 1.5px white;
+  text-shadow: 0 0 var(--blur) white;
 }
 
 .resume:hover,
 .contact-header:hover,
 .contact-email:hover {
-  text-shadow: 0 0 0.5px lightskyblue;
+  text-shadow: 0 0 var(--blur-off) lightskyblue;
 }
 
 .link-image {
-  filter: blur(1.5px);
-  transition: filter 0.5s linear;
+  filter: blur(var(--blur));
+  transition: filter var(--text-transition) linear;
 }
 .ContactLink:hover > .link-image {
-  filter: blur(0.5px);
+  filter: blur(var(--blur-off));
 }
 
 .contact-text {
   text-decoration: none;
   color: transparent;
-  text-shadow: 0 0 1.5px white;
-  transition: text-shadow 0.5s linear;
+  text-shadow: 0 0 var(--blur) white;
+  transition: text-shadow var(--text-transition) linear;
   margin: 2px;
   visibility: hidden;
 }
 
 .ContactLink:hover > .contact-text {
-  text-shadow: 0 0 0.5px lightskyblue;
+  text-shadow: 0 0 var(--blur-off) lightskyblue;
   visibility: visible;
 }
 
@@ -78,16 +85,16 @@
 
 .contact-header,
 .contact-email {
-  animation-delay: 0.75s;
+  animation-delay: calc(var(--base-animation-delay) - 0.25s);
 }
 
 .link-image,
 .contact-text {
-  animation-delay: 1s;
+  animation-delay: var(--base-animation-delay);
 }
 .resume {
-  animation-delay: 1.25s;
-  text-shadow: 0 0 2px white;
+  animation-delay: calc(var(--base-animation-delay) + 0.25s);
+  text-shadow: 0 0 var(--blur) white;
 }
 
 .contact-header {
