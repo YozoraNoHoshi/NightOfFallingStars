@@ -31,18 +31,14 @@ class Contact extends PureComponent {
     return (
       <div className="Contact">
         <div className="column-container justify-around">
-          <div className="row-container border-text contact-header">
-            CONTACT ME
-          </div>
-          <div className="row-container border-text contact-email">
-            NCHOSHIZORA@GMAIL.COM
-          </div>
+          <div className="row-container contact contact-header">CONTACT ME</div>
+          <div className="row-container contact">NCHOSHIZORA@GMAIL.COM</div>
         </div>
         <div className="contact-links">{this.renderLinks(links)}</div>
         <div className="row-container justify-around resume-box">
           <a
             href="../static/resume.pdf"
-            className="border-text no-underline resume"
+            className="no-underline resume"
             download
           >
             Resume

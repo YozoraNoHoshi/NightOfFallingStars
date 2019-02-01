@@ -1,14 +1,27 @@
 :root {
-  --text-transition: 0.5s;
-  --blur: 1.5px;
-  --blur-off: 0.5px;
-  --base-animation-delay: 1s;
+  --Contact-transition: 0.5s;
+  --Contact-blur: 1px;
+  --Contact-blur-off: 0.1px;
+  --Contact-animation-delay: 0.75s;
 }
 
 .Contact {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+div.Contact::before {
+  content: '';
+  position: absolute;
+  animation: ripple-l 2s ease-out forwards;
+  animation-iteration-count: 1;
+  animation-delay: 0.55s;
+  opacity: 0;
+  background-color: transparent;
+  border: 2px rgba(255, 255, 255, 0.1) solid;
+  border-radius: 100%;
 }
 
 .contact-links {
@@ -29,87 +42,78 @@
   margin-right: 10px;
 }
 
-.contact-header,
-.contact-email,
+.contact,
 .resume {
   font-family: 'Shadows Into Light', cursive;
   font-weight: bold;
   text-decoration: none;
-  color: transparent;
-  transition: text-shadow var(--text-transition) linear;
+  color: rgba(255, 255, 255, 0.1);
+  transition: text-shadow var(--Contact-transition) linear,
+    color var(--Contact-transition) linear;
 }
 
-.contact-header,
-.contact-email {
+.contact {
   cursor: default;
-  text-shadow: 0 0 var(--blur) white;
+  text-shadow: 0 0 var(--Contact-blur) white;
 }
 
 .resume:hover,
-.contact-header:hover,
-.contact-email:hover {
-  text-shadow: 0 0 var(--blur-off) lightskyblue;
+.contact:hover {
+  text-shadow: 0 0 var(--Contact-blur-off) lightskyblue;
+  color: lightskyblue;
 }
 
 .link-image {
-  filter: blur(var(--blur));
-  transition: filter var(--text-transition) linear;
+  filter: blur(var(--Contact-blur));
+  transition: filter var(--Contact-transition) linear;
 }
 .ContactLink:hover > .link-image {
-  filter: blur(var(--blur-off));
+  filter: blur(var(--Contact-blur-off));
 }
 
 .contact-text {
   text-decoration: none;
-  color: transparent;
-  text-shadow: 0 0 var(--blur) white;
-  transition: text-shadow var(--text-transition) linear;
+  color: rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 var(--Contact-blur) white;
+  transition: text-shadow var(--Contact-transition) linear,
+    color var(--Contact-transition), linear;
   margin: 2px;
   visibility: hidden;
 }
 
 .ContactLink:hover > .contact-text {
-  text-shadow: 0 0 var(--blur-off) lightskyblue;
+  text-shadow: 0 0 var(--Contact-blur-off) lightskyblue;
   visibility: visible;
+  color: lightskyblue;
 }
 
 .link-image,
 .contact-text,
-.contact-header,
-.contact-email,
+.contact,
 .resume {
   animation: starfall 2s linear;
   animation-iteration-count: 1;
   animation-fill-mode: both;
 }
 
-.contact-header,
-.contact-email {
-  animation-delay: calc(var(--base-animation-delay) - 0.25s);
+.contact {
+  animation-delay: calc(var(--Contact-animation-delay) - 0.25s);
 }
 
 .link-image,
 .contact-text {
-  animation-delay: var(--base-animation-delay);
+  animation-delay: var(--Contact-animation-delay);
 }
 .resume {
-  animation-delay: calc(var(--base-animation-delay) + 0.25s);
-  text-shadow: 0 0 var(--blur) white;
+  animation-delay: calc(var(--Contact-animation-delay) + 0.25s);
+  text-shadow: 0 0 var(--Contact-blur) white;
 }
 
-.contact-header {
-  font-size: 2em;
-}
-.contact-email,
+.contact,
 .resume {
   font-size: 1.25em;
 }
 
-@keyframes starfall {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.contact-header {
+  font-size: 2em;
 }

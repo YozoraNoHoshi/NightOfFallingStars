@@ -13,30 +13,35 @@
 }
 
 .quote,
-.profile {
+.profile,
+.about-me {
   animation: starfall 1s linear;
   animation-fill-mode: both;
   animation-iteration-count: 1;
+  background: rgba(255, 255, 255, 0.1);
   width: 50ch;
   align-items: center;
   margin: 10px;
   padding: 10px;
-  box-shadow: 0px 0px 2px rgba(168, 212, 226, 0.3);
+  box-shadow: 0px 0px 20px rgba(168, 212, 226, 0.3);
 }
 
 .blurred-text {
   text-decoration: none;
-  color: transparent;
-  text-shadow: 0 0 1px white;
-  transition: text-shadow 0.5s linear;
+  color: rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 0.5px white;
+  transition: text-shadow 0.5s linear, color 0.5s linear;
   cursor: default;
+
+  margin: 10px;
 }
 
 .column-container:hover > .blurred-text,
 .profile:hover > .blurred-text,
 .quote:hover > .quote-text {
   cursor: default;
-  text-shadow: 0 0 0.5px lightskyblue;
+  text-shadow: 0 0 0.1px lightskyblue;
+  color: lightskyblue;
 }
 
 .quote > .blurred-text {
@@ -46,16 +51,24 @@
 }
 
 .about-image {
-  filter: blur(2px);
+  filter: blur(0px);
   transition: filter 0.5s linear;
 }
 .column-container:hover > .about-image {
-  filter: blur(0.5px);
+  filter: blur(0px);
+}
+
+.quote-text {
+  font-size: 0.75em;
+}
+
+.about-me {
+  animation-delay: 0.7s;
 }
 
 .quote {
-  animation-delay: 0.75s;
+  animation-delay: 0.5s;
 }
 .profile {
-  animation-delay: 0.5s;
+  animation-delay: 0.3s;
 }

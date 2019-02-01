@@ -15,14 +15,12 @@ class App extends Component {
       <div className="SkyOfStars">
         <Navbar navItems={navItems} siteHead={siteHead} />
         <div className="center-star">
-          <div id="main">
-            <Router>
-              <Homepage default path="/" portfolio={portfolio} />
-              <About path="/about" />
-              <Contact path="contact" />
-              <PortfolioItem path="/portfolio/:item" portfolio={portfolio} />
-            </Router>
-          </div>
+          <Router className="main">
+            <Homepage default path="/" portfolio={portfolio} />
+            <About path="/about" />
+            <Contact path="contact" />
+            <PortfolioItem path="/portfolio/:item" portfolio={portfolio} />
+          </Router>
         </div>
       </div>
     );

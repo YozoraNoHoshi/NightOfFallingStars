@@ -11,19 +11,20 @@ class PortfolioItem extends PureComponent {
 
   componentDidMount() {
     let portfolio = this.props.portfolio[this.props.item];
-    if (portfolio) this.setState({ portfolio });
-    else navigate('/', { replace: true });
+    portfolio ? this.setState({ portfolio }) : navigate('/', { replace: true });
   }
 
   render() {
     return this.state.portfolio ? (
       <div className="PortfolioItem">
-        <div>
+        <div className="portfolio-link">
           <a href={this.state.portfolio.siteLink}>
             {this.state.portfolio.title}
           </a>
         </div>
-        <div>{this.state.portfolio.description}</div>
+        <div className="portfolio-description">
+          {this.state.portfolio.description}
+        </div>
         <img
           src={this.state.portfolio.image}
           alt={`${this.state.portfolio.title} preview`}

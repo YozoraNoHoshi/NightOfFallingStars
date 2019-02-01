@@ -1,7 +1,7 @@
 {
   "jobly": {
     "title": "Jobly",
-    "description": "Jobly was a 7 day sprint, split into two parts of 4 and 3 days. The first 4 days was spent building a backend in node.js using Express, whilee the last three were spent developing a fluid and responsive single-page front-end.",
+    "description": "Jobly was a 7 day sprint, split into two parts of 4 and 3 days. The first 4 days were spent building a backend in node.js using Express, whilee the last three were spent developing a fluid and responsive single-page front-end.",
     "link": "/portfolio/jobly",
     "siteLink": "https://jobly-hoshi.herokuapp.com/",
     "image": "",
