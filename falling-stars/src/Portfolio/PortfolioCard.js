@@ -3,13 +3,17 @@ import { Link } from '@reach/router';
 
 class PortfolioCard extends PureComponent {
   render() {
+    let style = {
+      animation: 'faded-starfall 3s ease-in backwards',
+      animationDelay: '.2s'
+    };
     return (
-      <div className="PortfolioCard">
-        <Link to={this.props.link}>
-          <img className="portfolio-bg" src={this.props.image} alt="" />
+      <Link className="portfolio-title" to={this.props.link}>
+        <div className="PortfolioCard" style={style}>
           <div>{this.props.title}</div>
-        </Link>
-      </div>
+          <img className="portfolio-bg" src={this.props.image} alt="" />
+        </div>
+      </Link>
     );
   }
 }

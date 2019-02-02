@@ -4,7 +4,7 @@ import './About.css';
 class About extends PureComponent {
   render() {
     return (
-      <div className="About column-container">
+      <div className="About">
         <div className="row-container">
           <div className="column-container quoted-for-truth">
             <div className="column-container profile">
@@ -31,12 +31,10 @@ class About extends PureComponent {
               className="about-image"
             />
             <div className="blurred-text">Age: 24</div>
-            <div className="blurred-text">
-              Hobbies: Reading novels, making snippets and random minigames in
-              Python/JavaScript, playing games on the hardest difficulty,
-              playing games in general, memes, staring at the sky for literally
-              no reason.
-            </div>
+            <p className="blurred-text">
+              Hobbies: Stardew Valley, Dragalia Lost, other games, trying to
+              make things tick.
+            </p>
           </div>
         </div>
       </div>

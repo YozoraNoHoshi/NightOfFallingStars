@@ -14,14 +14,14 @@ class App extends Component {
     return (
       <div className="SkyOfStars">
         <Navbar navItems={navItems} siteHead={siteHead} />
-        <div className="center-star">
-          <Router className="main">
+        <main>
+          <Router className="center-star">
             <Homepage default path="/" portfolio={portfolio} />
             <About path="/about" />
             <Contact path="contact" />
             <PortfolioItem path="/portfolio/:item" portfolio={portfolio} />
           </Router>
-        </div>
+        </main>
       </div>
     );
   }

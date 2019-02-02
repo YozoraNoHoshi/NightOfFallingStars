@@ -18,19 +18,21 @@ class Navbar extends PureComponent {
 
   render() {
     return (
-      <nav id="navbar">
-        <ul className="row-container">
-          <NavItem
-            key={`nav-${this.props.siteHead.name}`}
-            name={this.props.siteHead.name}
-            text={this.props.siteHead.text}
-            link={this.props.siteHead.link}
-          />
-        </ul>
-        <ul className="row-container m-r-l">
-          {this.renderNavItem(this.props.navItems)}
-        </ul>
-      </nav>
+      <header>
+        <nav id="navbar">
+          <ul className="row-container">
+            <NavItem
+              key={`nav-${this.props.siteHead.name}`}
+              name={this.props.siteHead.name}
+              text={this.props.siteHead.text}
+              link={this.props.siteHead.link}
+            />
+          </ul>
+          <ul className="row-container m-r-l">
+            {this.renderNavItem(this.props.navItems)}
+          </ul>
+        </nav>
+      </header>
     );
   }
 }

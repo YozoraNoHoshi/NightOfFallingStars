@@ -15,9 +15,9 @@
 div.Contact::before {
   content: '';
   position: absolute;
-  animation: ripple-l 2s ease-out forwards;
-  animation-iteration-count: 1;
-  animation-delay: 0.55s;
+  animation: ripple-l 4s linear forwards;
+  animation-iteration-count: infinite;
+  animation-delay: 0.65s;
   opacity: 0;
   background-color: transparent;
   border: 2px rgba(255, 255, 255, 0.1) solid;
