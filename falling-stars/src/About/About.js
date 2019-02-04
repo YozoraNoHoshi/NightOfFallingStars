@@ -35,6 +35,9 @@ class About extends PureComponent {
               Hobbies: Stardew Valley, Dragalia Lost, other games, trying to
               make things tick.
             </p>
+            <p className="blurred-text">
+              Favorite Game Genre: Strategy/Tactical, (J)RPGs
+            </p>
           </div>
         </div>
       </div>
