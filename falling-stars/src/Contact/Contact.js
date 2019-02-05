@@ -29,13 +29,15 @@ class Contact extends PureComponent {
 
   render() {
     return (
-      <div className="Contact">
-        <div className="column-container justify-around">
+      <section className="Contact">
+        <address className="column-container justify-around no-italics">
           <div className="row-container contact contact-header">CONTACT ME</div>
           <div className="row-container contact">NCHOSHIZORA@GMAIL.COM</div>
-        </div>
-        <div className="contact-links">{this.renderLinks(links)}</div>
-        <div className="row-container justify-around resume-box">
+        </address>
+        <address className="contact-links no-italics">
+          {this.renderLinks(links)}
+        </address>
+        <strong className="row-container justify-around resume-box">
           <a
             href="../static/resume.pdf"
             className="no-underline resume"
@@ -43,8 +45,8 @@ class Contact extends PureComponent {
           >
             Resume
           </a>
-        </div>
-      </div>
+        </strong>
+      </section>
     );
   }
 }

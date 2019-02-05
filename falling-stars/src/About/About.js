@@ -8,20 +8,20 @@ class About extends PureComponent {
         <div className="row-container">
           <div className="column-container quoted-for-truth">
             <div className="column-container profile">
-              <div className="blurred-text row-container">Nathan Chin</div>
+              <h2 className="blurred-text row-container">Nathan Chin</h2>
               <p className="blurred-text row-container">About blurb</p>
             </div>
             <div className="quote column-container">
-              <div className="quote-text blurred-text">
-                "For my part I know nothing with any certainty, but the sight of
-                the stars makes me dream."
-              </div>
-              <div
+              <q className="quote-text blurred-text">
+                For my part I know nothing with any certainty, but the sight of
+                the stars makes me dream.
+              </q>
+              <blockquote
                 className="quote-text blurred-text"
                 style={{ textAlign: 'right' }}
               >
                 - Vincent Van Gogh
-              </div>
+              </blockquote>
             </div>
           </div>
           <div className="row-container about-me">

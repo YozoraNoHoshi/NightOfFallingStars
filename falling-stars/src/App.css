@@ -47,6 +47,10 @@ body {
   text-decoration: none;
 }
 
+.no-italics {
+  font-style: normal;
+}
+
 @keyframes starfall {
   from {
     opacity: 0;

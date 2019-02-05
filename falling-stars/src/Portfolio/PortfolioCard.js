@@ -9,10 +9,10 @@ class PortfolioCard extends PureComponent {
     };
     return (
       <Link className="portfolio-title" to={this.props.link}>
-        <div className="PortfolioCard" style={style}>
-          <div>{this.props.title}</div>
+        <figure className="PortfolioCard" style={style}>
+          <figcaption>{this.props.title}</figcaption>
           <img className="portfolio-bg" src={this.props.image} alt="" />
-        </div>
+        </figure>
       </Link>
     );
   }

@@ -25,7 +25,7 @@
   overflow: hidden;
 }
 
-.PortfolioCard > div {
+.PortfolioCard > figcaption {
   transform: rotate(-45deg);
   opacity: 1;
 }

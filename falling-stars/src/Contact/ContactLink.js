@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 class ContactLink extends PureComponent {
   render() {
     return (
-      <div className="ContactLink">
+      <figure className="ContactLink">
         <a href={this.props.link} className="link-image">
           <img
             src={this.props.logo.image}
@@ -15,7 +15,7 @@ class ContactLink extends PureComponent {
         <a href={this.props.link} className="contact-text">
           {this.props.text}
         </a>
-      </div>
+      </figure>
     );
   }
 }

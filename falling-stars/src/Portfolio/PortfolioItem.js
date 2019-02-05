@@ -16,7 +16,7 @@ class PortfolioItem extends PureComponent {
 
   render() {
     return this.state.portfolio ? (
-      <div className="PortfolioItem">
+      <article className="PortfolioItem">
         <div className="portfolio-link">
           <a href={this.state.portfolio.siteLink}>
             {this.state.portfolio.title}
@@ -29,9 +29,9 @@ class PortfolioItem extends PureComponent {
           src={this.state.portfolio.image}
           alt={`${this.state.portfolio.title} preview`}
         />
-      </div>
+      </article>
     ) : (
-      <div className="PortfolioItem" />
+      <article className="PortfolioItem" />
     );
   }
 }
