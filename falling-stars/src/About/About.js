@@ -24,20 +24,23 @@ class About extends PureComponent {
               </div>
             </div>
           </div>
-          <div className="column-container about-me">
+          <div className="row-container about-me">
+            <div className="column-container">
+              <p className="blurred-text">Age: 24</p>
+              <p className="blurred-text">
+                Hobbies: Games, memes, anime/manga, not necessarily in that
+                order.
+              </p>
+              <p className="blurred-text">
+                Favorite Game Genre: Strategy/Tactical, (J)RPGs
+              </p>
+            </div>
             <img
               src="../static/profilePic.jpg"
               alt="profile goes here"
               className="about-image"
+              style={{ height: '100%' }}
             />
-            <div className="blurred-text">Age: 24</div>
-            <p className="blurred-text">
-              Hobbies: Stardew Valley, Dragalia Lost, other games, trying to
-              make things tick.
-            </p>
-            <p className="blurred-text">
-              Favorite Game Genre: Strategy/Tactical, (J)RPGs
-            </p>
           </div>
         </div>
       </div>
