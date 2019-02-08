@@ -13,6 +13,10 @@
   flex-wrap: wrap;
 }
 
+.about-me > .column-container {
+  width: 50%;
+}
+
 .quote,
 .profile,
 .about-me {
@@ -30,17 +34,18 @@
   overflow-wrap: normal;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.1);
-  text-shadow: 0 0 0.5px white;
+  text-shadow: 0 0 0.25px white;
   transition: text-shadow 0.5s linear, color 0.5s linear;
   cursor: default;
   margin: 10px;
 }
 
-.column-container:hover > .blurred-text,
+.about-me:hover > .column-container > .blurred-text,
+.about-me:hover > .column-container > .row-container > .blurred-text,
 .profile:hover > .blurred-text,
 .quote:hover > .quote-text {
   cursor: default;
-  text-shadow: 0 0 0.1px lightskyblue;
+  text-shadow: 0 0 0px lightskyblue;
   color: lightskyblue;
 }
 
@@ -50,10 +55,6 @@
   text-align: center;
 }
 
-.about-image {
-  filter: blur(0px);
-  transition: filter 0.5s linear;
-}
 .column-container:hover > .about-image {
   filter: blur(0px);
 }

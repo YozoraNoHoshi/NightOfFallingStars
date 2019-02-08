@@ -12,7 +12,7 @@
   align-items: center;
   position: relative;
 }
-div.Contact::before {
+section.Contact::before {
   content: '';
   position: absolute;
   animation: ripple-l 4s linear forwards;

@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import './About.css';
+import blobderpy from '../static/blobderpy.png';
 
 class About extends PureComponent {
   render() {
@@ -34,11 +35,18 @@ class About extends PureComponent {
               <p className="blurred-text">
                 Favorite Game Genre: Strategy/Tactical, (J)RPGs
               </p>
+              <div className="row-container">
+                <p className="blurred-text">Favorite Emoji:</p>
+                <img
+                  src={blobderpy}
+                  alt="blobderpy"
+                  style={{ width: 32, height: 32 }}
+                />
+              </div>
             </div>
             <img
               src="../static/profilePic.jpg"
               alt="profile goes here"
-              className="about-image"
               style={{ height: '100%' }}
             />
           </div>

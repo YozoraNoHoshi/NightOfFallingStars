@@ -16,22 +16,30 @@ class PortfolioItem extends PureComponent {
 
   render() {
     return this.state.portfolio ? (
-      <article className="PortfolioItem">
-        <div className="portfolio-link">
+      <>
+        <article className="PortfolioItem">
+          <div className="portfolio-link">
+            <a href={this.state.portfolio.siteLink}>
+              {this.state.portfolio.title}
+            </a>
+          </div>
+          <div className="portfolio-description">
+            {this.state.portfolio.description}
+          </div>
           <a href={this.state.portfolio.siteLink}>
-            {this.state.portfolio.title}
+            <img
+              src={this.state.portfolio.image}
+              alt={`${this.state.portfolio.title} preview`}
+            />
           </a>
-        </div>
-        <div className="portfolio-description">
-          {this.state.portfolio.description}
-        </div>
-        <img
-          src={this.state.portfolio.image}
-          alt={`${this.state.portfolio.title} preview`}
-        />
-      </article>
+        </article>
+        {/* Put navigation to portfolio objects here */}
+      </>
     ) : (
-      <article className="PortfolioItem" />
+      <>
+        <article className="PortfolioItem" />
+        {/* Put navigation to portfolio objects here */}
+      </>
     );
   }
 }
