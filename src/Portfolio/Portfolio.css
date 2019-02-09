@@ -92,7 +92,7 @@
 .portfolio-link > a {
   text-shadow: 0 0 var(--Portfolio-blur) skyblue;
   font-size: 4em;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
 
 .portfolio-description {

@@ -102,3 +102,7 @@ body {
 
 /* https://css-tricks.com/snippets/css/typewriter-effect/ */
 /* object-fit: contain, width: 100% for images that need to be scaled */
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('./static/CenturyGothic.ttf');
+}

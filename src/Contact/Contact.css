@@ -1,7 +1,7 @@
 :root {
   --Contact-transition: 0.5s;
-  --Contact-blur: 1px;
-  --Contact-blur-off: 0.1px;
+  --Contact-blur: 0.75px;
+  --Contact-blur-off: 0.2px;
   --Contact-animation-delay: 0.75s;
 }
 
@@ -44,7 +44,7 @@ section.Contact::before {
 
 .contact,
 .resume {
-  font-family: 'Shadows Into Light', cursive;
+  /* font-family: 'Shadows Into Light', cursive; */
   font-weight: bold;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.1);

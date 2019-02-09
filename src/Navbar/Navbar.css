@@ -7,6 +7,9 @@
   flex-direction: row;
   justify-content: space-between;
   height: 10vh;
+  border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
 }
 
 .nav-link {
