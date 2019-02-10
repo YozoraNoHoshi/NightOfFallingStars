@@ -3,6 +3,20 @@
   --Portfolio-blur: 0.25px;
 }
 
+.PortfolioNav {
+  position: absolute;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  border-right: 2px solid rgba(255, 255, 255, 0.1);
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 /* Portfolio Card and container styling */
 .Portfolio {
 }
@@ -75,7 +89,7 @@
   justify-content: space-around;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 25px;
-  box-shadow: 0 0 30px white;
+  box-shadow: 0 0 25px white;
   width: 50%;
   height: 50%;
   padding: 20px;

@@ -28,7 +28,7 @@ class Navbar extends PureComponent {
               link={this.props.siteHead.link}
             />
           </ul>
-          <ul className="row-container m-r-l">
+          <ul className="row-container">
             {this.renderNavItem(this.props.navItems)}
           </ul>
         </nav>

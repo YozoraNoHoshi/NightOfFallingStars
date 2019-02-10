@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { navigate } from '@reach/router';
+import PortfolioNav from './PortfolioNav';
 
 class PortfolioItem extends PureComponent {
   constructor(props) {
@@ -34,21 +35,20 @@ class PortfolioItem extends PureComponent {
           </a>
         </article>
         {/* Put navigation to portfolio objects here */}
+        <PortfolioNav portfolio={this.props.portfolio} />
       </>
     ) : (
       <>
         <article className="PortfolioItem" />
         {/* Put navigation to portfolio objects here */}
+        <PortfolioNav portfolio={this.props.portfolio} />
       </>
     );
   }
 }
 
 PortfolioItem.defaultProps = {
-  title: '',
-  description: '',
-  siteLink: '',
-  image: ''
+  portfolip: {}
 };
 
 PortfolioItem.propTypes = {};

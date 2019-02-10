@@ -2,23 +2,24 @@ import React, { PureComponent } from 'react';
 import { Link } from '@reach/router';
 
 class NavItem extends PureComponent {
+  activeStyle = ({ isCurrent }) => {
+    return isCurrent ? { className: 'nav-active', opacity: 1 } : null;
+  };
+
   render() {
     let classes =
       this.props.name === 'theSkyofStars' ? 'menu nav-header' : 'menu nav-item';
     return (
-      <header>
-        <aside>
-          <li id={`nav-${this.props.name}`} className={classes}>
-            <Link
-              className="no-underline nav-link"
-              to={this.props.link}
-              style={{ opacity: 1.0 }}
-            >
-              {this.props.text}
-            </Link>
-          </li>
-        </aside>
-      </header>
+      <li id={`nav-${this.props.name}`} className={classes}>
+        <Link
+          className="no-underline nav-link"
+          to={this.props.link}
+          style={{ opacity: 1.0 }}
+          getProps={this.activeStyle}
+        >
+          {this.props.text}
+        </Link>
+      </li>
     );
   }
 }
