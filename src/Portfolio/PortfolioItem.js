@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { navigate } from '@reach/router';
+import github from '../static/GitHubLogo.png';
 
 class PortfolioItem extends PureComponent {
   constructor(props) {
@@ -23,7 +24,8 @@ class PortfolioItem extends PureComponent {
           </a>
           <div className="portfolio-github">
             <a href={this.state.portfolio.github}>
-              <img src="../static/GitHubLogo.png" alt="Github" />
+              <img src={github} alt="Github" />
+              {/* <div className="gh-link">Source Code</div> */}
             </a>
           </div>
         </div>

@@ -3,23 +3,6 @@
   --Portfolio-blur: 0.25px;
 }
 
-.portfolio-github {
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin: 0;
-  padding: 0;
-  /* border: 2px solid rgba(255, 255, 255, 0.1);
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.05);
-  transition: background-color 0.5s linear; */
-}
-
-/* .portfolio-github:hover {
-  background-color: rgba(255, 255, 255, 0.25);
-} */
-
 /* Portfolio Card and container styling */
 .Portfolio {
 }
@@ -101,9 +84,20 @@
   margin-bottom: 10%;
 }
 
+.portfolio-github {
+  /* display: flex;
+  flex-direction: column; */
+  position: absolute;
+  right: 0;
+}
+
 .portfolio-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  width: 100%;
+  width: 80%;
+  margin: 0;
 }
 
 .portfolio-link > a,
