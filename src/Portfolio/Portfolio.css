@@ -3,19 +3,22 @@
   --Portfolio-blur: 0.25px;
 }
 
-.PortfolioNav {
+.portfolio-github {
   position: absolute;
   left: 0;
+  top: 0;
   margin: 0;
   padding: 0;
-  border-left: 2px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-  border-right: 2px solid rgba(255, 255, 255, 0.1);
-  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  /* border: 2px solid rgba(255, 255, 255, 0.1);
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: background-color 0.5s linear; */
 }
+
+/* .portfolio-github:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+} */
 
 /* Portfolio Card and container styling */
 .Portfolio {
@@ -87,6 +90,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  position: relative;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 25px;
   box-shadow: 0 0 25px white;
@@ -95,6 +99,11 @@
   padding: 20px;
   padding-bottom: 50px;
   margin-bottom: 10%;
+}
+
+.portfolio-link {
+  position: relative;
+  width: 100%;
 }
 
 .portfolio-link > a,
@@ -106,7 +115,6 @@
 .portfolio-link > a {
   text-shadow: 0 0 var(--Portfolio-blur) skyblue;
   font-size: 4em;
-  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
 
 .portfolio-description {

@@ -1,35 +1,20 @@
 import React, { PureComponent } from 'react';
-import NavItem from '../Navbar/NavItem';
+import { Link } from '@reach/router';
 
 class PortfolioNav extends PureComponent {
-  renderNavItem = navItems => {
-    return navItems.map(n => {
-      return (
-        <NavItem
-          key={`pnav-${n.title.toLowerCase()}`}
-          name={n.title.toLowerCase()}
-          text={n.title}
-          link={n.link}
-        />
-      );
-    });
-  };
-
   render() {
     return (
-      <footer className="PortfolioNav">
-        <nav id="portfolio-navbar">
-          <ul className="row-container">
-            {this.renderNavItem(Object.values(this.props.portfolio))}
-          </ul>
-        </nav>
-      </footer>
+      <Link
+        className="no-underline nav-link portfolio-return"
+        to="/"
+        style={{ opacity: 1.0 }}
+      >
+        Back
+      </Link>
     );
   }
 }
 
-PortfolioNav.defaultProps = {
-  portfolio: {}
-};
+PortfolioNav.defaultProps = {};
 
 export default PortfolioNav;

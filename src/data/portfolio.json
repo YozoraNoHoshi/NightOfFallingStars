@@ -5,6 +5,7 @@
     "link": "/portfolio/jobly",
     "siteLink": "https://jobly-hoshi.herokuapp.com/",
     "image": "",
-    "cardImage": "https://i.imgur.com/MKmtLgv.jpg"
+    "cardImage": "https://i.imgur.com/MKmtLgv.jpg",
+    "github": "https://github.com/YozoraNoHoshi/react-jobly"
   }
 }
