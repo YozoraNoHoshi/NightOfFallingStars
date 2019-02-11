@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
 import pokemonData from '../../../data/pokemon.json';
+import { Router } from '@reach/router';
+import MainMenu from './MainMenu.js';
 
 class Game extends PureComponent {
   constructor(props) {
@@ -63,7 +65,13 @@ class Game extends PureComponent {
   };
 
   render() {
-    return <div className="Game" />;
+    return (
+      <div className="Game">
+        <Router>
+          <MainMenu default path="/menu" />
+        </Router>
+      </div>
+    );
   }
 }
 

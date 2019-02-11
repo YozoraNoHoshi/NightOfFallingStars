@@ -25,19 +25,20 @@ class PortfolioItem extends PureComponent {
           <div className="portfolio-github">
             <a href={this.state.portfolio.github}>
               <img src={github} alt="Github" />
-              {/* <div className="gh-link">Source Code</div> */}
             </a>
           </div>
         </div>
         <div className="portfolio-description">
           {this.state.portfolio.description}
         </div>
-        <a href={this.state.portfolio.siteLink}>
-          <img
-            src={this.state.portfolio.image}
-            alt={`${this.state.portfolio.title} preview`}
-          />
-        </a>
+        <div className="portfolio-link">
+          <a href={this.state.portfolio.siteLink} style={{ fontSize: '1em' }}>
+            <img
+              src={this.state.portfolio.image}
+              alt={`${this.state.portfolio.title} preview`}
+            />
+          </a>
+        </div>
       </article>
     ) : (
       <article className="PortfolioItem" />

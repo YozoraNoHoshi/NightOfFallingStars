@@ -6,8 +6,10 @@ import Contact from './Contact/Contact';
 import About from './About/About';
 import Homepage from './Homepage/Homepage';
 import portfolio from './data/portfolio.json';
+import pokemon from './data/pokemon.json';
 import PortfolioItem from './Portfolio/PortfolioItem';
 import './App.css';
+import Game from './Pokemon/components/organisms/Game';
 
 class App extends Component {
   render() {
@@ -20,6 +22,7 @@ class App extends Component {
             <About path="/about" />
             <Contact path="contact" />
             <PortfolioItem path="/portfolio/:item" portfolio={portfolio} />
+            <Game path="/pokemon" pokemon={pokemon} />
           </Router>
         </main>
       </div>
