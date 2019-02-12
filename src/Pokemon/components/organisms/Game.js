@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
 import pokemonData from '../../../data/pokemon.json';
 import { Router } from '@reach/router';
-import MainMenu from './MainMenu.js';
+import MainMenu from '../molecules/MainMenu.js/index.js';
+import HabitatMenu from './HabitatMenu.js';
 
 class Game extends PureComponent {
   constructor(props) {
@@ -69,6 +70,7 @@ class Game extends PureComponent {
       <div className="Game">
         <Router>
           <MainMenu default path="/menu" />
+          <HabitatMenu path="/habitats" />
         </Router>
       </div>
     );

@@ -1,24 +1,8 @@
 import React, { PureComponent } from 'react';
-import ChangeScreenButton from '../molecules/ChangeScreenButton';
+import ChangeScreenButton from './ChangeScreenButton';
+import ModalMenu from './ModalMenu';
 
 class MainMenu extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  componentDidMount() {}
-
-  handleChange = evt => {
-    this.setState({
-      [evt.target.name]: evt.target.value
-    });
-  };
-
-  handleSubmit = evt => {
-    evt.preventDefault();
-  };
-
   render() {
     return (
       <div className="MainMenu">
@@ -28,9 +12,16 @@ class MainMenu extends PureComponent {
         </ChangeScreenButton>
         {/* Habitat Submenu */}
         <ChangeScreenButton to="/habitats">Habitats</ChangeScreenButton>
+        {/* These can be modals */}
         {/* Inventory Submenu */}
+        {/* <ModalMenu>
+          <Bag />
+        </ModalMenu> */}
         <ChangeScreenButton to="/bag">Bag</ChangeScreenButton>
         {/* Trainer Details - includes Save/Load */}
+        {/* <ModalMenu>
+          <TrainerInfo />
+        </ModalMenu> */}
         <ChangeScreenButton to="/trainer">
           Trainer Information
         </ChangeScreenButton>
