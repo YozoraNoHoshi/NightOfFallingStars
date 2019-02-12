@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import ChangeScreenButton from './ChangeScreenButton';
-import ModalMenu from './ModalMenu';
+import InventoryMenu from './InventoryMenu';
+import TrainerMenu from './TrainerMenu';
 
 class MainMenu extends PureComponent {
   render() {
@@ -14,14 +15,10 @@ class MainMenu extends PureComponent {
         <ChangeScreenButton to="/habitats">Habitats</ChangeScreenButton>
         {/* These can be modals */}
         {/* Inventory Submenu */}
-        {/* <ModalMenu>
-          <Bag />
-        </ModalMenu> */}
+        <InventoryMenu />
         <ChangeScreenButton to="/bag">Bag</ChangeScreenButton>
         {/* Trainer Details - includes Save/Load */}
-        {/* <ModalMenu>
-          <TrainerInfo />
-        </ModalMenu> */}
+        <TrainerMenu />
         <ChangeScreenButton to="/trainer">
           Trainer Information
         </ChangeScreenButton>

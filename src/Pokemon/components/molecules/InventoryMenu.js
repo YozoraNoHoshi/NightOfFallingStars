@@ -1,25 +1,13 @@
 import React, { PureComponent } from 'react';
+import ModalMenu from './ModalMenu';
 
 class InventoryMenu extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  componentDidMount() {}
-
-  handleChange = evt => {
-    this.setState({
-      [evt.target.name]: evt.target.value
-    });
-  };
-
-  handleSubmit = evt => {
-    evt.preventDefault();
-  };
-
   render() {
-    return <div className="InventoryMenu">{/* Show inventory contents */}</div>;
+    return (
+      <div className="InventoryMenu">
+        <ModalMenu text="Bag">InventoryConponents/layout</ModalMenu>
+      </div>
+    );
   }
 }
 
