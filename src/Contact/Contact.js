@@ -5,6 +5,7 @@ import links from '../data/contact.json';
 import github from '../static/GitHubLogo.png';
 import linkedIn from '../static/LinkedInLogo.png';
 import angelList from '../static/AngelListLogo.png';
+import resume from '../static/resume.pdf';
 
 class Contact extends PureComponent {
   renderLinks = links => {
@@ -38,11 +39,7 @@ class Contact extends PureComponent {
           {this.renderLinks(links)}
         </address>
         <strong className="row-container justify-around resume-box">
-          <a
-            href="../static/resume.pdf"
-            className="no-underline resume"
-            download
-          >
+          <a href={resume} className="no-underline resume" download>
             Resume
           </a>
         </strong>
