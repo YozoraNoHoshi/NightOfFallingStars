@@ -5,7 +5,6 @@ import { Router } from '@reach/router';
 import Contact from './Contact/Contact';
 import About from './About/About';
 import Homepage from './Homepage/Homepage';
-import portfolio from './data/portfolio.json';
 import { PORTFOLIO } from './data';
 import pokemon from './data/pokemon.json';
 import PortfolioItem from './Portfolio/PortfolioItem';
@@ -32,3 +31,4 @@ class App extends Component {
 }
 
 export default App;
+// https://reactstrap.github.io/components/carousel/

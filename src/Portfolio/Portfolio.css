@@ -114,6 +114,7 @@
 .portfolio-description {
   width: 80%;
   color: white;
+  text-align: center;
   text-shadow: -1px 0 var(--Portfolio-blur) black,
     0 1px var(--Portfolio-blur) black, 1px 0 var(--Portfolio-blur) black,
     0 -1px var(--Portfolio-blur) black;

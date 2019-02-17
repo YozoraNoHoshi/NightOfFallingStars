@@ -6,16 +6,18 @@ class PortfolioItem extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      portfolio: undefined
+      portfolio: props.portfolio[props.item]
+      // portfolio: undefined
     };
   }
 
-  componentDidMount() {
-    let portfolio = this.props.portfolio[this.props.item];
-    portfolio ? this.setState({ portfolio }) : navigate('/', { replace: true });
-  }
+  // componentDidMount() {
+  //   let portfolio = this.props.portfolio[this.props.item];
+  //   portfolio ? this.setState({ portfolio }) : navigate('/', { replace: true });
+  // }
 
   render() {
+    !this.state.portfolio && navigate('/', { replace: true });
     return this.state.portfolio ? (
       <article className="PortfolioItem">
         <div className="portfolio-link">

@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import './About.css';
 import blobderpy from '../static/blobderpy.png';
+import profilePicture from '../static/profilepic.png';
 
 class About extends PureComponent {
   render() {
@@ -45,8 +46,8 @@ class About extends PureComponent {
               </div>
             </div>
             <img
-              src="../static/profilePic.jpg"
-              alt="profile goes here"
+              src={profilePicture}
+              alt="profile pic"
               style={{ height: '100%' }}
             />
           </div>
