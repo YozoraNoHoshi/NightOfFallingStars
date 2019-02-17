@@ -6,6 +6,7 @@ import Contact from './Contact/Contact';
 import About from './About/About';
 import Homepage from './Homepage/Homepage';
 import portfolio from './data/portfolio.json';
+import { PORTFOLIO } from './data';
 import pokemon from './data/pokemon.json';
 import PortfolioItem from './Portfolio/PortfolioItem';
 import './App.css';
@@ -18,10 +19,10 @@ class App extends Component {
         <Navbar navItems={navItems} siteHead={siteHead} />
         <main>
           <Router className="center-star">
-            <Homepage default path="/" portfolio={portfolio} />
+            <Homepage default path="/" portfolio={PORTFOLIO} />
             <About path="/about" />
             <Contact path="contact" />
-            <PortfolioItem path="/portfolio/:item" portfolio={portfolio} />
+            <PortfolioItem path="/portfolio/:item" portfolio={PORTFOLIO} />
             <Game path="/pokemon" pokemon={pokemon} />
           </Router>
         </main>

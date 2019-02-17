@@ -1,17 +1,13 @@
 import React, { PureComponent } from 'react';
 import ContactLink from './ContactLink';
 import './Contact.css';
-import links from '../data/contact.json';
-import github from '../static/GitHubLogo.png';
-import linkedIn from '../static/LinkedInLogo.png';
-import angelList from '../static/AngelListLogo.png';
-import resume from '../static/resume.pdf';
+import { CONTACT, RESUME } from '../data';
 
 class Contact extends PureComponent {
   renderLinks = links => {
     return links.map(l => {
       let logo = {
-        image: this.props[l.name],
+        image: l.logo,
         name: `${l.name}-logo`,
         height: '64px',
         width: '64px'
@@ -36,10 +32,10 @@ class Contact extends PureComponent {
           <div className="row-container contact">NCHOSHIZORA@GMAIL.COM</div>
         </address>
         <address className="contact-links no-italics">
-          {this.renderLinks(links)}
+          {this.renderLinks(CONTACT)}
         </address>
         <strong className="row-container justify-around resume-box">
-          <a href={resume} className="no-underline resume" download>
+          <a href={RESUME} className="no-underline resume" download>
             Resume
           </a>
         </strong>
@@ -47,11 +43,5 @@ class Contact extends PureComponent {
     );
   }
 }
-
-Contact.defaultProps = {
-  github,
-  linkedIn,
-  angelList
-};
 
 export default Contact;

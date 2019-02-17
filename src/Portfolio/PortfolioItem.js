@@ -22,11 +22,13 @@ class PortfolioItem extends PureComponent {
           <a href={this.state.portfolio.siteLink}>
             {this.state.portfolio.title}
           </a>
-          <div className="portfolio-github">
-            <a href={this.state.portfolio.github}>
-              <img src={github} alt="Github" />
-            </a>
-          </div>
+          {this.state.portfolio.github && (
+            <div className="portfolio-github">
+              <a href={this.state.portfolio.github}>
+                <img src={github} alt="Github" />
+              </a>
+            </div>
+          )}
         </div>
         <div className="portfolio-description">
           {this.state.portfolio.description}
