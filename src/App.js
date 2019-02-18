@@ -22,7 +22,7 @@ class App extends Component {
             <About path="/about" />
             <Contact path="contact" />
             <PortfolioItem path="/portfolio/:item" portfolio={PORTFOLIO} />
-            <Game path="/pokemon" pokemon={pokemon} />
+            <Game path="/pokemon/*" pokemon={pokemon} />
           </Router>
         </main>
       </div>

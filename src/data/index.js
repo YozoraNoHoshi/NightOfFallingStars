@@ -3,7 +3,7 @@ import linkedIn from '../static/LinkedInLogo.png';
 import angelList from '../static/AngelListLogo.png';
 import resume from '../static/resume.pdf';
 import groupmuselogo from '../static/groupmuseLogo.png';
-import gmBG from '../static/gb-bg.png';
+import gmBG from '../static/gmbg.jpeg';
 import appStore from '../static/AppStoreBadge.svg';
 
 export const RESUME = resume;

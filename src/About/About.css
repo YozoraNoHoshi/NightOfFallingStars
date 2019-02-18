@@ -55,6 +55,17 @@
   text-align: center;
 }
 
+/* .profile-image {
+  overflow: hidden;
+  height: 100%;
+} */
+
+.profile-image > img {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .column-container:hover > .about-image {
   filter: blur(0px);
 }
