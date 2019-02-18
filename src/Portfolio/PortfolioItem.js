@@ -43,6 +43,16 @@ class PortfolioItem extends PureComponent {
             />
           </a>
         </div>
+        {this.state.portfolio.badge && (
+          <div className="portfolio-link">
+            <a href={this.state.portfolio.siteLink} style={{ fontSize: '1em' }}>
+              <img
+                src={this.state.portfolio.badge}
+                alt={`${this.state.portfolio.title} on the app store`}
+              />
+            </a>
+          </div>
+        )}
       </article>
     ) : (
       <article className="PortfolioItem" />

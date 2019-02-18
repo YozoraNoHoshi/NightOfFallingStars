@@ -4,6 +4,7 @@ import angelList from '../static/AngelListLogo.png';
 import resume from '../static/resume.pdf';
 import groupmuselogo from '../static/groupmuseLogo.png';
 import gmBG from '../static/gb-bg.png';
+import appStore from '../static/AppStoreBadge.svg';
 
 export const RESUME = resume;
 export const CONTACT = [
@@ -45,6 +46,7 @@ export const PORTFOLIO = {
     siteLink: 'https://itunes.apple.com/us/app/groupmuse/id942675649',
     image: gmBG,
     cardImage: groupmuselogo,
-    github: ''
+    github: '',
+    badge: appStore
   }
 };
