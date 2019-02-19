@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import pokemonData from '../../../data/pokemon.json';
+// import pokemonData from '../../../data/pokemon.json';
 import { Router } from '@reach/router';
 import MainMenu from '../molecules/MainMenu';
 import HabitatMenu from './HabitatMenu.js';

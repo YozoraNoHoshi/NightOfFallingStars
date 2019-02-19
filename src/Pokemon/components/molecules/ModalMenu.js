@@ -19,7 +19,9 @@ class ModalMenu extends PureComponent {
       <div className="ModalMenu">
         <MenuButton click={this.toggleModal}>{this.props.text}</MenuButton>
         {this.state.open && (
-          <Modal toggleModal={this.toggleModal}>{this.props.children}</Modal>
+          <Modal show={this.state.open} toggleModal={this.toggleModal}>
+            {this.props.children}
+          </Modal>
         )}
       </div>
     );
