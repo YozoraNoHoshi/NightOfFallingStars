@@ -5,7 +5,7 @@
     "text": "A Sky of Stars"
   },
   "navItems": [
-    { "name": "about", "link": "/about", "text": "About" },
-    { "name": "contact", "link": "/contact", "text": "Contact" }
+    { "name": "about", "link": "/about", "text": "about" },
+    { "name": "contact", "link": "/contact", "text": "contact" }
   ]
 }
