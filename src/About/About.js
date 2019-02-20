@@ -10,24 +10,10 @@ class About extends PureComponent {
         <div className="row-container">
           <div className="column-container quoted-for-truth">
             <div className="column-container profile">
-              <h2 className="blurred-text row-container">Nathan Chin</h2>
+              <h1 className="blurred-text row-container">Nathan Chin</h1>
               <p className="blurred-text row-container">About blurb</p>
             </div>
-            <div className="quote column-container">
-              <q className="quote-text blurred-text">
-                For my part I know nothing with any certainty, but the sight of
-                the stars makes me dream.
-              </q>
-              <blockquote
-                className="quote-text blurred-text"
-                style={{ textAlign: 'right' }}
-              >
-                - Vincent Van Gogh
-              </blockquote>
-            </div>
-          </div>
-          <div className="row-container about-me">
-            <div className="column-container">
+            <div className="profile">
               <p className="blurred-text">Age: 24</p>
               <p className="blurred-text">
                 Hobbies: Games, memes, anime/manga, not necessarily in that
@@ -45,6 +31,20 @@ class About extends PureComponent {
                 />
               </div>
             </div>
+            <div className="quote column-container">
+              <q className="quote-text blurred-text">
+                For my part I know nothing with any certainty, but the sight of
+                the stars makes me dream.
+              </q>
+              <blockquote
+                className="quote-text blurred-text"
+                style={{ textAlign: 'right' }}
+              >
+                - Vincent Van Gogh
+              </blockquote>
+            </div>
+          </div>
+          <div className="row-container about-me">
             <div className="column-container profile-image">
               <img src={profilePicture} alt="profile pic" />
             </div>

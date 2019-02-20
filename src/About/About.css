@@ -9,12 +9,12 @@
 }
 
 .about-me {
-  width: 50%;
+  width: 25%;
   flex-wrap: wrap;
 }
 
 .about-me > .column-container {
-  width: 50%;
+  width: 100%;
 }
 
 .quote,
@@ -34,7 +34,7 @@
   overflow-wrap: normal;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.1);
-  text-shadow: 0 0 0.25px white;
+  text-shadow: 0 0 0.1px white;
   transition: text-shadow 0.5s linear, color 0.5s linear;
   cursor: default;
   margin: 10px;
@@ -43,6 +43,7 @@
 .about-me:hover > .column-container > .blurred-text,
 .about-me:hover > .column-container > .row-container > .blurred-text,
 .profile:hover > .blurred-text,
+.profile:hover > div > .blurred-text,
 .quote:hover > .quote-text {
   cursor: default;
   text-shadow: 0 0 0px lightskyblue;
@@ -54,11 +55,6 @@
   font-size: 1.25em;
   text-align: center;
 }
-
-/* .profile-image {
-  overflow: hidden;
-  height: 100%;
-} */
 
 .profile-image > img {
   object-fit: contain;
