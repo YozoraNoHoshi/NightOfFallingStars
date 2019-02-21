@@ -1,28 +1,55 @@
 :root {
-  --Portfolio-transition: 0.75s;
+  --Portfolio-transition: 0.5s;
   --Portfolio-blur: 0.25px;
 }
 
 /* Portfolio Card and container styling */
+.portfolio-container {
+  display: inherit;
+  flex-direction: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  width: 100%;
+  height: 100%;
+}
+
 .Portfolio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 3.5%;
+  margin-bottom: 3.5%;
+}
+
+.Portfolio.r1,
+.Portfolio.r3 {
+  width: 33%;
+}
+.Portfolio.r2 {
+  width: 50%;
 }
 
 .PortfolioCard {
-  /* background-color: red; */
+  --PortfolioSize: 100px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 200px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 1);
-  border-radius: 5%;
-  transition: opacity var(--Portfolio-transition) linear;
-  transform: rotate(45deg);
-  opacity: 0.7;
   overflow: hidden;
+  opacity: 0.8;
+  width: var(--PortfolioSize);
+  height: var(--PortfolioSize);
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5%;
+  transition: opacity var(--Portfolio-transition) linear,
+    box-shadow var(--Portfolio-transition) ease-out;
+}
+.PortfolioCard:hover {
+  opacity: 1;
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.5);
 }
 
 .PortfolioCard > figcaption {
@@ -30,41 +57,31 @@
   opacity: 1;
 }
 
-.PortfolioCard:hover {
-  opacity: 1;
-}
-
-/* figure.PortfolioCard::before {
-  position: absolute;
-  content: '';
-  background-color: transparent;
-  border-radius: 5%;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-}
-
-.PortfolioCard:hover::before {
-  border: 2px white solid;
-  animation: ripple 3s ease-out both;
-  animation-iteration-count: 1;
-} */
-
 .portfolio-bg {
+  pointer-events: none;
   position: absolute;
   left: -25%;
   top: -25%;
   width: 150%;
   height: 150%;
-  opacity: 0.2;
+  opacity: 0.5;
   transform: rotate(-45deg);
+  transition: opacity var(--Portfolio-transition) ease-out;
 }
 
-.portfolio-title {
+.PortfolioCard:hover > .portfolio-bg {
+  opacity: 0.75;
+}
+
+/* .portfolio-title {
   text-shadow: -1px 0 var(--Portfolio-blur) black,
     0 1px var(--Portfolio-blur) black, 1px 0 var(--Portfolio-blur) black,
     0 -1px var(--Portfolio-blur) black;
   font-size: 2em;
+} */
+
+.pf-rotate {
+  transform: rotate(45deg);
 }
 /* Portfolio Item Styling */
 
@@ -72,50 +89,67 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   position: relative;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 25px;
   box-shadow: 0 0 25px white;
   width: 50%;
-  height: 50%;
+  height: 75%;
   padding: 20px;
-  padding-bottom: 50px;
-  margin-bottom: 10%;
+  animation: faded-starfall 1s ease-in backwards;
+  animation-delay: 0.15s;
 }
 
-.portfolio-github {
-  /* display: flex;
-  flex-direction: column; */
-  position: absolute;
-  right: 0;
+.PortfolioItem > div {
+  margin-top: 4%;
+  margin-bottom: 4%;
 }
 
-.portfolio-link {
+.portfolio-item-container {
   display: flex;
   justify-content: center;
-  align-items: center;
   position: relative;
-  width: 80%;
+  align-items: center;
+  width: 90%;
   margin: 0;
 }
 
-.portfolio-link > a,
 .portfolio-title {
   text-decoration: none;
   color: skyblue;
 }
 
-.portfolio-link > a {
+.portfolio-item-text {
+  text-decoration: none;
+  text-shadow: 2px 2px 8px steelblue;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.gh-link {
   text-shadow: 0 0 var(--Portfolio-blur) skyblue;
-  font-size: 4em;
+  text-decoration: none;
+  color: skyblue;
+  cursor: default;
+}
+
+.portfolio-image {
+  height: 20%;
+  overflow: hidden;
+}
+
+.portfolio-image > a > img {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .portfolio-description {
   width: 80%;
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
   text-align: center;
-  text-shadow: -1px 0 var(--Portfolio-blur) black,
+  margin-bottom: 0;
+  /* text-shadow: -1px 0 var(--Portfolio-blur) black,
     0 1px var(--Portfolio-blur) black, 1px 0 var(--Portfolio-blur) black,
-    0 -1px var(--Portfolio-blur) black;
+    0 -1px var(--Portfolio-blur) black; */
 }

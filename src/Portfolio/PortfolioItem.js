@@ -1,61 +1,75 @@
 import React, { PureComponent } from 'react';
-import { navigate } from '@reach/router';
 import github from '../static/GitHubLogo.png';
+import { Redirect } from '@reach/router';
 
 class PortfolioItem extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
       portfolio: props.portfolio[props.item]
-      // portfolio: undefined
     };
   }
 
-  // componentDidMount() {
-  //   let portfolio = this.props.portfolio[this.props.item];
-  //   portfolio ? this.setState({ portfolio }) : navigate('/', { replace: true });
-  // }
+  renderBadge = () => {
+    return (
+      <div className="portfolio-link">
+        <a href={this.state.portfolio.siteLink} style={{ fontSize: '1em' }}>
+          <img
+            style={{ height: '100%' }}
+            src={this.state.portfolio.badge}
+            alt={`${this.state.portfolio.title} on the app store`}
+          />
+        </a>
+      </div>
+    );
+  };
+
+  renderGHLogo = () => {
+    return (
+      <div className="portfolio-link">
+        <a href={this.state.portfolio.github}>
+          <img src={github} alt="Github" />
+        </a>
+      </div>
+    );
+  };
 
   render() {
-    !this.state.portfolio && navigate('/', { replace: true });
     return this.state.portfolio ? (
       <article className="PortfolioItem">
-        <div className="portfolio-link">
-          <a href={this.state.portfolio.siteLink}>
+        <div className="portfolio-item-container" style={{ fontSize: '2em' }}>
+          <a
+            className="portfolio-item-text"
+            href={this.state.portfolio.siteLink}
+            style={{ fontSize: '2em' }}
+          >
             {this.state.portfolio.title}
           </a>
-          {this.state.portfolio.github && (
-            <div className="portfolio-github">
-              <a href={this.state.portfolio.github}>
-                <img src={github} alt="Github" />
-              </a>
-            </div>
-          )}
         </div>
-        <div className="portfolio-description">
-          {this.state.portfolio.description}
-        </div>
-        <div className="portfolio-link">
-          <a href={this.state.portfolio.siteLink} style={{ fontSize: '1em' }}>
+        <div className="portfolio-item-container portfolio-image">
+          <a
+            className="portfolio-item-text"
+            href={this.state.portfolio.siteLink}
+            style={{ fontSize: '1em' }}
+          >
             <img
               src={this.state.portfolio.image}
               alt={`${this.state.portfolio.title} preview`}
             />
           </a>
         </div>
-        {this.state.portfolio.badge && (
-          <div className="portfolio-link">
-            <a href={this.state.portfolio.siteLink} style={{ fontSize: '1em' }}>
-              <img
-                src={this.state.portfolio.badge}
-                alt={`${this.state.portfolio.title} on the app store`}
-              />
-            </a>
+        <div className="portfolio-description">
+          {this.state.portfolio.description}
+        </div>
+        {this.state.portfolio.badge || this.state.portfolio.github ? (
+          <div className="portfolio-badges">
+            {this.state.portfolio.github && this.renderGHLogo()}
+            {this.state.portfolio.badge && this.renderBadge()}
           </div>
-        )}
+        ) : null}
       </article>
     ) : (
-      <article className="PortfolioItem" />
+      <Redirect to="/" noThrow />
     );
   }
 }

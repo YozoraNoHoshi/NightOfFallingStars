@@ -4,13 +4,13 @@ import { Link } from '@reach/router';
 class PortfolioCard extends PureComponent {
   render() {
     let style = {
-      animation: 'faded-starfall 3s ease-in backwards',
-      animationDelay: '.2s'
+      animation: 'faded-starfall 1s ease-in backwards',
+      animationDelay: `${this.props.delay}s`
     };
     return (
-      <Link className="portfolio-title" to={this.props.link}>
+      <Link className="portfolio-title pf-rotate" to={this.props.link}>
         <figure className="PortfolioCard" style={style}>
-          <figcaption>{this.props.title}</figcaption>
+          {/* <figcaption>{this.props.title}</figcaption> */}
           <img className="portfolio-bg" src={this.props.image} alt="" />
         </figure>
       </Link>
@@ -21,7 +21,8 @@ class PortfolioCard extends PureComponent {
 PortfolioCard.defaultProps = {
   title: '',
   link: '/',
-  image: ''
+  image: '',
+  delay: 0.25
 };
 
 PortfolioCard.propTypes = {};
