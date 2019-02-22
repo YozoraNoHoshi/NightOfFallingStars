@@ -28,7 +28,15 @@ class PortfolioItem extends PureComponent {
     return (
       <div className="portfolio-link">
         <a href={this.state.portfolio.github}>
-          <img src={github} alt="Github" />
+          <div
+            className="portfolio-item-text column-container"
+            style={{ width: '6ch', justifyContent: 'center' }}
+          >
+            Source Code
+          </div>
+          <div>
+            <img src={github} alt="Github" />
+          </div>
         </a>
       </div>
     );
@@ -36,7 +44,7 @@ class PortfolioItem extends PureComponent {
 
   renderBadges = () => {
     return this.state.portfolio.badge || this.state.portfolio.github ? (
-      <div className="portfolio-badges" style={{ marginBottom: 0 }}>
+      <div className="portfolio-item-container" style={{ marginBottom: 0 }}>
         {this.state.portfolio.github && this.renderGHLogo()}
         {this.state.portfolio.badge && this.renderBadge()}
       </div>
@@ -88,7 +96,7 @@ class PortfolioItem extends PureComponent {
               style={{ fontSize: '1em' }}
             >
               {this.renderPreview()}
-              {this.state.portfolio !== 'groupmuse' && (
+              {this.state.portfolio.title !== 'Groupmuse' && (
                 <div
                   style={{
                     textDecoration: 'underline',

@@ -12,16 +12,11 @@ class Portfolio extends PureComponent {
   splitCards = items => {
     // Supports up to 7 portfolio items
     let rows = { r1: [], r2: [], r3: [] };
-    let ghostRow = [];
     items.forEach((e, i) => {
-      if (i === 2 || i === 3 || i === 5) {
-        ghostRow.push(e);
-        if (i !== 3) rows.r1.push(e);
-      }
+      if (i === 2 || i === 3) rows.r1.push(e);
       if (i === 0 || i === 1 || i === 4) rows.r2.push(e);
-      if (i === 3 || i === 6) rows.r3.push(e);
+      if (i === 5 || i === 6) rows.r3.push(e);
     });
-    if (items.length === 6) return { r1: ghostRow, r2: rows.r2, r3: [] };
     return rows;
   };
 

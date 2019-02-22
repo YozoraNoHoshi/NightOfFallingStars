@@ -9,6 +9,9 @@ import hsnooze from '../static/hsz.mp4';
 import hspreview from '../static/hspreview.png';
 import joblypreview from '../static/joblypreview.png';
 import jobly from '../static/jobly.mp4';
+import mbpreview from '../static/mbpreview.png';
+import wpreview from '../static/wpreview.png';
+import wb from '../static/wb.mp4';
 
 export const RESUME = resume;
 export const CONTACT = [
@@ -36,13 +39,36 @@ export const PORTFOLIO = {
   jobly: {
     title: 'Jobly',
     description:
-      'Jobly was a 7 day sprint, split into two parts of 4 and 3 days. The first 4 days were spent building a backend in node.js using Express, while the last three were spent developing a fluid and responsive single-page frontend.',
+      'A job board clone designed in React and Express. \n4 days were spent building a full CRUD RESTful backend complete with JWT-based authentication, while 3 more were spent developing a responsive single-page frontend.',
     link: '/portfolio/jobly',
     siteLink: 'https://jobly-hoshi.herokuapp.com/',
     image: jobly,
     imgType: 'video',
     cardImage: joblypreview,
     github: 'https://github.com/YozoraNoHoshi/react-jobly'
+  },
+  warbler: {
+    title: 'Warbler',
+    description:
+      "Warbler is server-rendered site based off Social Media giant Twitter. \nWarbler features cookie-based authentication and is powered by Python's Flask framework.",
+    link: '/portfolio/warbler',
+    siteLink: 'https://warbler-hoshi.herokuapp.com',
+    image: wb,
+    imgType: 'video',
+    cardImage: wpreview,
+    github: 'https://github.com/YozoraNoHoshi/warbler'
+  },
+
+  hackorsnooze: {
+    title: 'Hack or Snooze',
+    description:
+      "Hack-or-Snooze was a 2 day static HTML/CSS clone of popular site Hacker News.\n The frontend was built using jQuery and jQuery's built in AJAX library.",
+    link: '/portfolio/hackorsnooze',
+    siteLink: 'https://yozoranohoshi.github.io/Hack-Or-Snooze/',
+    image: hsnooze,
+    imgType: 'video',
+    cardImage: hspreview,
+    github: 'https://github.com/YozoraNoHoshi/Hack-Or-Snooze'
   },
   groupmuse: {
     title: 'Groupmuse',
@@ -56,26 +82,15 @@ export const PORTFOLIO = {
     github: '',
     badge: appStore
   },
-  hackorsnooze: {
-    title: 'Hack or Snooze',
-    description:
-      "Hack-or-Snooze was a 2 day static HTML/CSS clone of popular site Hacker News.\n The frontend was built using jQuery and jQuery's built in AJAX library.",
-    link: '/portfolio/hackorsnooze',
-    siteLink: 'https://yozoranohoshi.github.io/Hack-Or-Snooze/',
-    image: hsnooze,
-    imgType: 'video',
-    cardImage: hspreview,
-    github: 'https://github.com/YozoraNoHoshi/Hack-Or-Snooze'
-  },
   microblog: {
     title: 'Microblog',
     description:
-      'Built over the course of 3 days using React.js and Redux.js, Microblog was a full-stack challenge in managing data flow.\n The project features user authentication through server-generated JSON web tokens stored in local storage and a full CRUD RESTful API.',
+      'Built over the course of 3 days using React.js, Microblog was a full-stack challenge in managing data flow across multiple levels of components with Redux.js.',
     link: '/portfolio/microblog',
     siteLink: 'https://microblog-hoshi.herokuapp.com',
     image: '',
     imgType: '',
-    cardImage: groupmuselogo,
+    cardImage: mbpreview,
     github: 'https://github.com/YozoraNoHoshi/microblog'
   }
 };
