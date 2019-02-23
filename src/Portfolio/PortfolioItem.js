@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import github from '../static/GitHubLogo.png';
 import { Redirect } from '@reach/router';
+const TRANSPARENT = 'rgba(0,0,0,.5)';
 
 class PortfolioItem extends PureComponent {
   constructor(props) {
@@ -26,19 +27,29 @@ class PortfolioItem extends PureComponent {
 
   renderGHLogo = () => {
     return (
-      <div className="portfolio-link">
-        <a href={this.state.portfolio.github}>
+      <a href={this.state.portfolio.github}>
+        <div
+          className="portfolio-link"
+          style={{
+            padding: 10,
+            background: TRANSPARENT,
+            borderRadius: 10,
+            boxSizing: 'border-box'
+          }}
+        >
           <div
             className="portfolio-item-text column-container"
             style={{ width: '6ch', justifyContent: 'center' }}
           >
             Source Code
           </div>
-          <div>
-            <img src={github} alt="Github" />
-          </div>
-        </a>
-      </div>
+          <img
+            src={github}
+            alt="Github"
+            style={{ height: '48px', width: '48px' }}
+          />
+        </div>
+      </a>
     );
   };
 

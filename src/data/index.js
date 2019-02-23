@@ -12,6 +12,7 @@ import jobly from '../static/jobly.mp4';
 import mbpreview from '../static/mbpreview.png';
 import wpreview from '../static/wpreview.png';
 import wb from '../static/wb.mp4';
+import mb from '../static/mb.mp4';
 
 export const RESUME = resume;
 export const CONTACT = [
@@ -88,8 +89,8 @@ export const PORTFOLIO = {
       'Built over the course of 3 days using React.js, Microblog was a full-stack challenge in managing data flow across multiple levels of components with Redux.js.',
     link: '/portfolio/microblog',
     siteLink: 'https://microblog-hoshi.herokuapp.com',
-    image: '',
-    imgType: '',
+    image: mb,
+    imgType: 'video',
     cardImage: mbpreview,
     github: 'https://github.com/YozoraNoHoshi/microblog'
   }
