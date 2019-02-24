@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
 import ContactLink from './ContactLink';
 import './Contact.css';
-import { CONTACT, RESUME } from '../data';
+import { CONTACT } from '../data';
+import { Link } from '@reach/router';
 
 class Contact extends PureComponent {
   renderLinks = links => {
@@ -34,10 +35,11 @@ class Contact extends PureComponent {
         <address className="contact-links no-italics">
           {this.renderLinks(CONTACT)}
         </address>
+
         <strong className="row-container justify-around resume-box">
-          <a href={RESUME} className="no-underline resume" download>
-            Resume
-          </a>
+          <Link to="/resume" className="resume">
+            View Resume
+          </Link>
         </strong>
       </section>
     );
