@@ -57,3 +57,33 @@
   margin-right: 25px;
   font-size: 0.7em;
 }
+
+@media (max-width: 480px) {
+  /* Adjust nav item sizes/formatting */
+  .nav-link,
+  .nav-active {
+    font-size: 1.75em;
+  }
+  .nav-item {
+    margin-right: 15px;
+  }
+}
+@media (max-width: 420px) {
+  /* Adjust nav item sizes/formatting */
+  .nav-link,
+  .nav-active {
+    font-size: 1.5em;
+  }
+  .nav-item {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 360px) {
+  .nav-link,
+  .nav-active {
+    font-size: 1.25em;
+  }
+  .nav-item {
+    margin-right: 5px;
+  }
+}

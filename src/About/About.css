@@ -1,6 +1,6 @@
 .About > .row-container {
   justify-content: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .quoted-for-truth {
@@ -61,6 +61,7 @@
   object-fit: contain;
   max-width: 100%;
   max-height: 100%;
+  border-radius: 10px;
 }
 
 .column-container:hover > .about-image {
@@ -80,4 +81,42 @@
 }
 .profile {
   animation-delay: 0.3s;
+}
+
+@media (max-width: 1200px) {
+  .quoted-for-truth {
+    width: 50%;
+  }
+}
+@media (max-width: 1080px) {
+  .about-me {
+    width: 33%;
+  }
+}
+
+@media (max-width: 840px) {
+  .quoted-for-truth {
+    width: 80%;
+  }
+  .about-me {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .About {
+    margin-top: 60%;
+  }
+
+  .quoted-for-truth {
+    width: 90%;
+    margin: 0;
+  }
+  .about-me {
+    width: 50%;
+  }
+  .About > .row-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

@@ -182,3 +182,25 @@ a > .portfolio-link {
   margin-top: 0;
   margin-bottom: 5px;
 }
+
+@media (max-width: 440px) {
+  .PortfolioCard {
+    --PortfolioSize: 75px;
+  }
+}
+
+@media (max-width: 960px) {
+  .Portfolio.r1,
+  .Portfolio.r3 {
+    width: 80%;
+  }
+  .Portfolio.r2 {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .PortfolioItem {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 0;
+  }
+}
