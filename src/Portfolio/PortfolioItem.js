@@ -27,7 +27,7 @@ class PortfolioItem extends PureComponent {
 
   renderGHLogo = () => {
     return (
-      <a href={this.state.portfolio.github}>
+      <a href={this.state.portfolio.github} style={{ textDecoration: 'none' }}>
         <div
           className="portfolio-link"
           style={{
@@ -39,7 +39,10 @@ class PortfolioItem extends PureComponent {
         >
           <div
             className="portfolio-item-text column-container"
-            style={{ width: '6ch', justifyContent: 'center' }}
+            style={{
+              width: '6ch',
+              justifyContent: 'center'
+            }}
           >
             Source Code
           </div>
