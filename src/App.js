@@ -35,4 +35,3 @@ class App extends Component {
 }
 
 export default App;
-// https://reactstrap.github.io/components/carousel/
