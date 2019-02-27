@@ -46,7 +46,7 @@ export const PORTFOLIO = {
     image: jobly,
     imgType: 'video',
     cardImage: joblypreview,
-    github: 'https://github.com/YozoraNoHoshi/react-jobly'
+    github: 'https://github.com/YozoraNoHoshi/jobly-board'
   },
   warbler: {
     title: 'Warbler',

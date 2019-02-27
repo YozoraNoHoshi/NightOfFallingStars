@@ -39,12 +39,6 @@ class About extends PureComponent {
                 We are not the result of some process - we are still the
                 process.
               </q>
-              {/* <blockquote
-                className="quote-text blurred-text"
-                style={{ textAlign: 'right' }}
-              >
-                - Vincent Van Gogh
-              </blockquote> */}
             </div>
           </div>
           <div className="row-container about-me">
@@ -57,6 +51,5 @@ class About extends PureComponent {
     );
   }
 }
-// Scribd
 
 export default About;
