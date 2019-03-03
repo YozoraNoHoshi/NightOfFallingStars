@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
-import github from '../static/GitHubLogo.png';
 import { Redirect } from '@reach/router';
-const TRANSPARENT = 'rgba(0,0,0,.5)';
+import Badge from './Badge';
+import GithubBadge from './GithubBadge';
+import VideoPreview from './VideoPreview';
 
 class PortfolioItem extends PureComponent {
   constructor(props) {
@@ -11,56 +12,19 @@ class PortfolioItem extends PureComponent {
     };
   }
 
-  renderBadge = () => {
-    return (
-      <div className="portfolio-link">
-        <a href={this.state.portfolio.siteLink} style={{ fontSize: '1em' }}>
-          <img
-            style={{ height: '100%' }}
-            src={this.state.portfolio.badge}
-            alt={`${this.state.portfolio.title} on the app store`}
-          />
-        </a>
-      </div>
-    );
-  };
-
-  renderGHLogo = () => {
-    return (
-      <a href={this.state.portfolio.github} style={{ textDecoration: 'none' }}>
-        <div
-          className="portfolio-link"
-          style={{
-            padding: 10,
-            background: TRANSPARENT,
-            borderRadius: 10,
-            boxSizing: 'border-box'
-          }}
-        >
-          <div
-            className="portfolio-item-text column-container"
-            style={{
-              width: '6ch',
-              justifyContent: 'center'
-            }}
-          >
-            Source Code
-          </div>
-          <img
-            src={github}
-            alt="Github"
-            style={{ height: '48px', width: '48px' }}
-          />
-        </div>
-      </a>
-    );
-  };
-
   renderBadges = () => {
     return this.state.portfolio.badge || this.state.portfolio.github ? (
       <div className="portfolio-item-container" style={{ marginBottom: 0 }}>
-        {this.state.portfolio.github && this.renderGHLogo()}
-        {this.state.portfolio.badge && this.renderBadge()}
+        {this.state.portfolio.github && (
+          <GithubBadge github={this.state.portfolio.github} />
+        )}
+        {this.state.portfolio.badge && (
+          <Badge
+            siteLink={this.state.portfolio.siteLink}
+            badge={this.state.portfolio.badge}
+            title={this.state.portfolio.title}
+          />
+        )}
       </div>
     ) : null;
   };
@@ -74,20 +38,6 @@ class PortfolioItem extends PureComponent {
       );
     });
     return parsedText;
-  };
-
-  renderPreview = () => {
-    return this.state.portfolio.imgType === 'video' ? (
-      <video controls autoPlay loop>
-        <source src={this.state.portfolio.image} type="video/mp4" />
-        {this.state.portfolio.title} preview.
-      </video>
-    ) : (
-      <img
-        src={this.state.portfolio.image}
-        alt={`${this.state.portfolio.title} preview`}
-      />
-    );
   };
 
   render() {
@@ -109,7 +59,11 @@ class PortfolioItem extends PureComponent {
               href={this.state.portfolio.siteLink}
               style={{ fontSize: '1em' }}
             >
-              {this.renderPreview()}
+              <VideoPreview
+                imgType={this.state.portfolio.imgType}
+                image={this.state.portfolio.image}
+                title={this.state.portfolio.title}
+              />
               {this.state.portfolio.title !== 'Groupmuse' && (
                 <div
                   style={{
