@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar/Navbar';
-import { navItems, siteHead } from './data/nav.json';
 import { Router } from '@reach/router';
 import Contact from './Contact/Contact';
 import About from './About/About';
-import { PORTFOLIO, RESUME } from './data';
+import { PORTFOLIO, RESUME, NAV } from './data';
 import PortfolioItem from './Portfolio/PortfolioItem';
-import './App.css';
 import Portfolio from './Portfolio/Portfolio';
 import Resume from './Contact/Resume';
+import './App.css';
 
 class App extends Component {
   constructor(props) {
@@ -19,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <div className="SkyOfStars">
-        <Navbar navItems={navItems} siteHead={siteHead} />
+        <Navbar navItems={NAV.navItems} siteHead={NAV.siteHead} />
         <main>
           <Router className="center-star">
             <Portfolio default path="/" portfolio={this.portfolio} />

@@ -15,6 +15,18 @@ import wb from '../static/wb.mp4';
 import mb from '../static/mb.mp4';
 
 export const RESUME = resume;
+export const NAV = {
+  siteHead: {
+    name: 'theSkyofStars',
+    link: '/',
+    text: 'A Sky of Stars'
+  },
+  navItems: [
+    { name: 'about', link: '/about', text: 'about' },
+    { name: 'contact', link: '/contact', text: 'contact' }
+  ]
+};
+
 export const CONTACT = [
   {
     name: 'github',
