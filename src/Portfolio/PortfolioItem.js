@@ -49,7 +49,7 @@ class PortfolioItem extends PureComponent {
         >
           {this.state.portfolio.title}
         </div>
-        <div className="row-container" style={{ width: '90%' }}>
+        <div className="portfolio-item-content" style={{ width: '90%' }}>
           <div className="portfolio-description">
             {this.parseDescription(this.state.portfolio.description)}
           </div>
