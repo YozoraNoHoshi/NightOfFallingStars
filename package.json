@@ -12,7 +12,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "cppdf": "cp node_modules/pdfjs-dist/build/pdf.worker.min.js build/static/pdf.worker.min.js",
+    "cppdf": "cp node_modules/pdfjs-dist/build/pdf.worker.min.js build/pdf.worker.min.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "aws s3 cp build/ s3://yozoranohoshi.com --recursive"
