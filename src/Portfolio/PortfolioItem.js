@@ -64,7 +64,7 @@ class PortfolioItem extends PureComponent {
                 image={this.state.portfolio.image}
                 title={this.state.portfolio.title}
               />
-              {this.state.portfolio.title !== 'Groupmuse' && (
+              {!this.state.portfolio.noVisit && (
                 <div
                   style={{
                     textDecoration: 'underline',

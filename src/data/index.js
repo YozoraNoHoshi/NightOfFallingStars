@@ -2,7 +2,7 @@ import github from '../static/GitHubLogo.png';
 import linkedIn from '../static/LinkedInLogo.png';
 import angelList from '../static/AngelListLogo.png';
 import resume from '../static/resume.pdf';
-import groupmuselogo from '../static/groupmuseLogo.png';
+import groupmuselogo from '../static/groupmuseLogo.jpg';
 import gmBG from '../static/gm.mp4';
 import appStore from '../static/AppStoreBadge.svg';
 import hsnooze from '../static/hsz.mp4';
@@ -13,6 +13,8 @@ import mbpreview from '../static/mbpreview.png';
 import wpreview from '../static/wpreview.png';
 import wb from '../static/wb.mp4';
 import mb from '../static/mb.mp4';
+import nb from '../static/nb.mp4';
+import nbpreview from '../static/nbpreview.png';
 
 export const RESUME = resume;
 export const NAV = {
@@ -50,6 +52,7 @@ export const CONTACT = [
 
 export const PORTFOLIO = {
   jobly: {
+    noVisit: false,
     title: 'Jobly',
     description:
       'A job board clone designed in React and Express. \n4 days were spent building a full CRUD RESTful backend complete with JWT-based authentication, while 3 more were spent developing a responsive single-page frontend.',
@@ -61,6 +64,7 @@ export const PORTFOLIO = {
     github: 'https://github.com/YozoraNoHoshi/jobly-board'
   },
   warbler: {
+    noVisit: false,
     title: 'Warbler',
     description:
       "Warbler is server-rendered site based off Social Media giant Twitter. \nWarbler features cookie-based authentication and is powered by Python's Flask framework.",
@@ -71,8 +75,8 @@ export const PORTFOLIO = {
     cardImage: wpreview,
     github: 'https://github.com/YozoraNoHoshi/warbler'
   },
-
   hackorsnooze: {
+    noVisit: false,
     title: 'Hack or Snooze',
     description:
       "Hack-or-Snooze was a 2 day static HTML/CSS clone of popular site Hacker News.\n The frontend was built using jQuery and jQuery's built in AJAX library.",
@@ -84,6 +88,7 @@ export const PORTFOLIO = {
     github: 'https://github.com/YozoraNoHoshi/Hack-Or-Snooze'
   },
   groupmuse: {
+    noVisit: true,
     title: 'Groupmuse',
     description:
       "As part of Rithm's curriculum, I worked with Groupmuse - a startup focused on bringing classical music into homely social gatherings - on their iOS mobile application. \n The application was built with React Native and we engineered a reusable template system for screen layout, along with an internal component library.",
@@ -96,6 +101,7 @@ export const PORTFOLIO = {
     badge: appStore
   },
   microblog: {
+    noVisit: false,
     title: 'Microblog',
     description:
       'Built over the course of 3 days using React.js, Microblog was a full-stack challenge in managing data flow across multiple levels of components with Redux.js.',
@@ -105,5 +111,17 @@ export const PORTFOLIO = {
     imgType: 'video',
     cardImage: mbpreview,
     github: 'https://github.com/YozoraNoHoshi/microblog'
+  },
+  narrator: {
+    noVisit: true,
+    title: 'Narrator',
+    description:
+      'Narrator Bot is a Discord bot built for myself and my friends to use.\nWe were tired of having to load 3-4 bots just to get all the features we wanted, so I decided to take matters into my own hands.\n Narrator was built on TypeScript and the Node.js environment using the Discord.js package.',
+    link: '/portfolio/narrator',
+    siteLink: 'https://github.com/YozoraNoHoshi/NarratorBot',
+    image: nb,
+    imgType: 'video',
+    cardImage: nbpreview,
+    github: 'https://github.com/YozoraNoHoshi/NarratorBot'
   }
 };
