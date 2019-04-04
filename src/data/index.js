@@ -116,7 +116,7 @@ export const PORTFOLIO = {
     noVisit: true,
     title: 'Narrator',
     description:
-      'Narrator Bot is a Discord bot built for myself and my friends to use.\nWe were tired of having to load 3-4 bots just to get all the features we wanted, so I decided to take matters into my own hands.\n Narrator was built on TypeScript and the Node.js environment using the Discord.js package.',
+      'Narrator Bot is a Discord bot built on TypeScript and Node.js.\nI decided to write my own bot to reduce redundant bots in our Discord server.\nThe profile picture is taken from Akasaka Aka\'s manga "Kaguya Wants to be Confessed to".',
     link: '/portfolio/narrator',
     siteLink: 'https://github.com/YozoraNoHoshi/NarratorBot',
     image: nb,
